@@ -8,26 +8,51 @@ DOTFILES_ROOT=$(pwd -P)
 set -e
 
 echo ''
-
-info () {
-  printf "\r  [ \033[00;34m..\033[0m ] $1\n"
+function coloredEcho() {
+    local exp="$1";
+    local color="$2";
+    local arrow="$3";
+    if ! [[ $color =~ '^[0-9]$' ]] ; then
+       case $(echo $color | tr '[:upper:]' '[:lower:]') in
+        black) color=0 ;;
+        red) color=1 ;;
+        green) color=2 ;;
+        yellow) color=3 ;;
+        blue) color=4 ;;
+        magenta) color=5 ;;
+        cyan) color=6 ;;
+        white|*) color=7 ;; # white or invalid color
+       esac
+    fi
+    tput bold;
+    tput setaf "$color";
+    echo "$arrow $exp";
+    tput sgr0;
 }
 
-user () {
+function user() {
   printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
-success () {
-  printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+
+function info() {
+    coloredEcho "$1" blue "========>"
 }
 
-fail () {
-  printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
-  echo ''
-  exit
+function substep() {
+    coloredEcho "$1" magenta "===="
 }
 
-setup_gitconfig () {
+function success() {
+    coloredEcho "$1" green "========>"
+}
+
+function error() {
+    coloredEcho "$1" red "========>"
+}
+
+
+function setup_gitconfig() {
   if ! [ -f git/gitconfig.local.symlink ]
   then
     info 'setup gitconfig'
@@ -49,7 +74,7 @@ setup_gitconfig () {
   fi
 }
 
-install_xcode_command_line_tools () {
+function install_xcode_command_line_tools() {
     info "Installing Xcode command line tools"
     if softwareupdate --history | grep --silent "Command Line Tools"; then
         success "Xcode command line tools already exists"
@@ -66,7 +91,7 @@ install_xcode_command_line_tools () {
     fi
 }
 
-install_homebrew () {
+function install_homebrew () {
     info "Installing Homebrew"
     if hash brew 2>/dev/null; then
         success "Homebrew already exists"
