@@ -51,6 +51,18 @@ function error() {
     coloredEcho "$1" red "========>"
 }
 
+function ask_for_sudo() {
+    info "Prompting for sudo password"
+    if sudo --validate; then
+        # Keep-alive
+        while true; do sudo --non-interactive true; \
+            sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
+        success "Sudo password updated"
+    else
+        error "Sudo password update failed"
+        exit 1
+    fi
+}
 
 function setup_gitconfig() {
   if ! [ -f git/gitconfig.local.symlink ]
@@ -105,3 +117,124 @@ function install_homebrew () {
         fi
     fi
 }
+
+function install_oh_my_zsh () {
+	info "Installing oh_my_zsh"
+}
+
+function install_packages_with_brewfile() {
+    info "Installing Brewfile packages"
+
+    TAP=${DOTFILES_ROOT}/brew/Brewfile_tap
+    BREW=${DOTFILES_ROOT}/brew/Brewfile_brew
+    CASK=${DOTFILES_ROOT}/brew/Brewfile_cask
+    MAS=${DOTFILES_ROOT}/brew/Brewfile_mas
+
+    if hash parallel 2>/dev/null; then
+        substep "parallel already exists"
+    else
+        if brew install parallel &> /dev/null; then
+            printf 'will cite' | parallel --citation &> /dev/null
+            substep "parallel installation succeeded"
+        else
+            error "parallel installation failed"
+            exit 1
+        fi
+    fi
+
+    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
+        success "Brewfile packages are already installed"
+    else
+        if brew bundle --file="$TAP"; then
+            substep "Brewfile_tap installation succeeded"
+
+            export HOMEBREW_CASK_OPTS="--no-quarantine"
+            if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
+                success "Brewfile packages installation succeeded"
+            else
+                error "Brewfile packages installation failed"
+                exit 1
+            fi
+        else
+            error "Brewfile_tap installation failed"
+            exit 1
+        fi
+    fi
+}
+
+function setup_vim() {
+    info "Setting up vim"
+    substep "Installing Vundle"
+    if test -e ~/.vim/bundle/Vundle.vim; then
+        substep "Vundle already exists"
+        pull_latest ~/.vim/bundle/Vundle.vim
+        substep "Pull successful in Vundle's repository"
+    else
+        url=https://github.com/VundleVim/Vundle.vim.git
+        if git clone "$url" ~/.vim/bundle/Vundle.vim; then
+            substep "Vundle installation succeeded"
+        else
+            error "Vundle installation failed"
+            exit 1
+        fi
+    fi
+    substep "Installing all plugins"
+    if vim +PluginInstall +qall 2> /dev/null; then
+        substep "Plugins installations succeeded"
+    else
+        error "Plugins installations failed"
+        exit 1
+    fi
+    success "vim successfully setup"
+}
+
+function setup_tmux() {
+    info "Setting up tmux"
+    substep "Installing tpm"
+    if test -e ~/.tmux/plugins/tpm; then
+        substep "tpm already exists"
+        pull_latest ~/.tmux/plugins/tpm
+        substep "Pull successful in tpm's repository"
+    else
+        url=https://github.com/tmux-plugins/tpm
+        if git clone "$url" ~/.tmux/plugins/tpm; then
+            substep "tpm installation succeeded"
+        else
+            error "tpm installation failed"
+            exit 1
+        fi
+    fi
+
+    substep "Installing all plugins"
+
+    # sourcing .tmux.conf is necessary for tpm
+    tmux source-file ~/.tmux.conf 2> /dev/null
+
+    if ~/.tmux/plugins/tpm/bin/./install_plugins &> /dev/null; then
+        substep "Plugins installations succeeded"
+    else
+        error "Plugins installations failed"
+        exit 1
+    fi
+    success "tmux successfully setup"
+}
+
+main() {
+    ask_for_sudo
+    install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
+	setup_gitconfig
+#	clone_dotfiles_repo
+    install_homebrew
+    install_packages_with_brewfile
+#    change_shell_to_fish
+#   install_pip_packages
+#    install_yarn_packages
+#    setup_symlinks # needed for setup_vim and setup_tmux
+    setup_vim
+    setup_tmux
+#    update_hosts_file
+#    setup_macOS_defaults
+#    update_login_items
+}
+
+main "$@"
