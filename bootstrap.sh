@@ -172,7 +172,7 @@ function setup_emacsadventures () {
         mkdir ~/.emacs.d/emacsadventures
     fi
     symlink "emacsadventure" ~/code/emacsadventures ~/.emacs.d/emacsadventures
-    echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" > myfile.txt
+    echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" > ~/.emacs.d/init.el
     success "emacsadventures setup succeeded"
 }
 
