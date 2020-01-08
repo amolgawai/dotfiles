@@ -1,0 +1,275 @@
+" Inspired by
+" https://github.com/romainl/idiomatic-vimrc/blob/master/idiomatic-vimrc.vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle initialization
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " use Vim settings, rather than Vi settings
+set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle
+set shell=/bin/bash " set shell to bash explicitly due to fish incompatibility
+let mapleader = "\<Space>" " remap <leader> to <space>
+filetype off
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins list
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Plugin 'Valloric/YouCompleteMe' " Code-completion engine
+Plugin 'jiangmiao/auto-pairs' " Insert brackets, parens or quotes in pair
+Plugin 'rafi/awesome-vim-colorschemes' " Collection of color schemes
+Plugin 'vim-syntastic/syntastic' " Syntax checking
+Plugin 'SirVer/ultisnips' " Snippet solution
+Plugin 'honza/vim-snippets' " Needed for snippet solution
+Plugin 'airblade/vim-gitgutter' " Showing git diff in the 'gutter' (sign column)
+Plugin 'wincent/terminus' " Enhanced terminal integration
+Plugin 'scrooloose/nerdtree' " File tree explorer
+Plugin 'Yggdroot/indentLine' " Display indention levels with thin vertical lines
+Plugin 'terryma/vim-multiple-cursors' " Sublime Text style multiple selections
+Plugin 'ntpeters/vim-better-whitespace' " Whitespace highlighting and cleaning
+Plugin 'christoomey/vim-tmux-navigator' " Seamless navigation between tmux panes and vim splits
+Plugin 'scrooloose/nerdcommenter' " Comment functions
+Plugin 'Vimjas/vim-python-pep8-indent' " A nicer Python indentation style
+Plugin 'wincent/command-t' " Fuzzy file search
+Plugin 'sbdchd/neoformat' " Code formatter
+Plugin 'pangloss/vim-javascript' " Javascript indentation and syntax support
+Plugin 'leafgarland/typescript-vim' " Typescript syntax support, indentation based on pangloss/vim-javascript
+Plugin 'mxw/vim-jsx' " Syntax highlighting and indenting for JSX
+Plugin 'ianks/vim-tsx' " Syntax highlighting and indenting for TSX
+Plugin 'dag/vim-fish' " Syntax highlighting and indenting for Fish scripts
+Plugin 'posva/vim-vue' " Syntax highlighting for Vue
+Plugin 'hashivim/vim-terraform' " Syntax highlighting for Terraform files
+Plugin 'gabrielelana/vim-markdown' " Syntax highlighting for markdown files
+Plugin 'mzlogin/vim-markdown-toc' " Generate table of content for markdown files
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle finalisation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call vundle#end()
+filetype plugin indent on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ================ vim-markdown configuration ========================
+let g:markdown_enable_spell_checking = 0
+
+" ================ command-t configuration ========================
+let g:CommandTAlwaysShowDotFiles = 1
+
+" ================ vim-snippets configuration ========================
+" Adding html snippets to tsx and jsx file types
+autocmd FileType typescript,javascript UltiSnipsAddFiletypes html
+
+" ================ Terminus configuration ========================
+let g:TerminusMouse = 0
+let g:TerminusFocusReporting = 1
+let g:TerminusAssumeITerm = 1
+let g:TerminusBracketedPaste = 0
+
+" ================ Powerline configuration ========================
+silent! python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
+
+" ================ vim-better-whitespace configuration =========================
+let g:better_whitespace_enabled = 1
+let g:strip_whitespace_on_save = 1
+let g:strip_whitespace_confirm = 0
+let g:better_whitespace_filetypes_blacklist = ['diff', 'gitcommit', 'unite', 'qf', 'help']
+
+" =========== vim-tmux-navigator configuration ====================
+" Consistent navigation in tmux, vim, vimium
+
+" Splits => Alt  + hjkl
+"############################################################################
+
+let g:tmux_navigator_disable_when_zoomed = 1
+let g:tmux_navigator_no_mappings = 1
+
+" https://stackoverflow.com/a/38259051/5208999
+execute "set <M-h>=\eh"
+execute "set <M-j>=\ej"
+execute "set <M-k>=\ek"
+execute "set <M-l>=\el"
+
+nnoremap <silent> <M-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <M-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <M-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <M-l> :TmuxNavigateRight<cr>
+
+" ================ YouCompleteMe configuration ====================
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" ================ Syntastic configuration ========================
+highlight SyntasticError guibg=#2f0000
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_python_checkers = ['flake8'] " temporarily remove mypy as it causes huge delay on big repos with vim
+"let g:syntastic_python_checkers = ['flake8', 'mypy']
+
+" ================ GitGutter configuration ========================
+let g:gitgutter_map_keys = 0
+
+" ================ Snippet engine configuration ===================
+let g:UltiSnipsExpandTrigger = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger = ""
+let g:UltiSnipsJumpBackwardTrigger = ""
+
+" ================ NERDTree configuration =========================
+let NERDTreeQuitOnOpen = 1 " automatically close NerdTree when you open a file
+let NERDTreeMinimalUI = 1 " disable that old “Press ? for help”
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.swp$', '\.DS_Store$', '\.git$', '\.node_modules$']
+" open NERDTree when vim starts up with no files specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 &&
+            \ exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" ================ Neoformat configuration =========================
+" using prettier for formatting these files
+autocmd BufWritePre *.js,*.jsx Neoformat
+autocmd BufWritePre *.ts,*.tsx Neoformat
+autocmd BufWritePre *.vue Neoformat
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings (Always use non-recursive mappings, i.e. "nore")
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" ================ NORMAL MODE =========================
+
+" EXCEPTION of using recursive mapping to refresh command-t and nerdtree
+nmap <leader>r
+    \ :NERDTreeFocus<CR>R
+    \ :sleep 100m<CR>
+    \ :q<CR>
+    \ :CommandTFlush<CR>:<backspace>
+    \ :echo "File cache updated!"<CR>
+
+" map control-i to GoTo subcommand of YouCompleteMe
+nnoremap <C-i> :YcmCompleter GoToDefinition<CR> :<backspace>
+
+function CustomNerdToggle()
+    if &filetype == 'nerdtree'
+        :NERDTreeToggle
+    else
+        :NERDTreeFind
+    endif
+endfunction
+" map <leader>o to toggle the tree AND reveal the open file in the tree
+nnoremap <leader>o :call CustomNerdToggle() <CR> :<backspace>
+
+" clear search pattern with <leader> and <space>
+nnoremap <leader><space> :noh<CR>:<backspace>
+
+" remove until end of file with d and e
+nnoremap de d$
+
+" open vertical or horizontal splits with <leader> and \ or -
+nnoremap <leader>\ :vs<CR>
+nnoremap <leader>- :split<CR>
+
+" resize panes with <leader> and jklh=
+nnoremap <leader>= <C-W>=
+nnoremap <leader>j <C-W>5+
+nnoremap <leader>k <C-W>5-
+nnoremap <leader>l <C-W>5>
+nnoremap <leader>h <C-W>5<
+
+" save the file with enter
+nnoremap <CR> :write<CR>
+
+" reload .vimrc with <leader> and R
+nnoremap <leader>R :source ~/.vimrc<cr>:noh<CR>:echo "vim reloaded!"<cr>
+
+" quit files with <leader> and q
+nnoremap <leader>q :q<cr>
+
+" switch between tabs with Shift-h and Shift-l
+nnoremap H gT
+nnoremap L gt
+
+" go to end of line with e
+nnoremap e $
+
+" go to first non-blank charachter with 0
+nnoremap 0 ^
+
+" toggle paste mode with <leader> and p
+set pastetoggle=<leader>p
+
+" map semicolon to colon to avoid the extra shift to go to cmd mode
+nnoremap ; :
+
+" ================ INSERT MODE =========================
+
+" exit INSERT mode with jj
+inoremap jj <ESC>
+
+" ================ VISUAL MODE =========================
+
+" map semicolon to colon to avoid the extra shift to go to cmd mode
+vnoremap ; :
+
+" map s to sort selected lines
+vnoremap s :sort<CR> :<backspace>
+
+" ================ UNBINDINGS =========================
+
+" training for e usage instead of $
+nnoremap $ <Nop>
+nnoremap d$ <Nop>
+
+" removing the stupid error of marker not set when accidentally hitting ';
+nnoremap ' <Nop>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set backspace=indent,eol,start  " allow backspace in insert mode
+set backupcopy=yes " preserving soft/hard links bit.ly/2Rmkhma
+set clipboard=unnamed " making Vim work with system clipboard
+set hlsearch " highlight search patterns
+set ignorecase " ignore case when searching...
+set incsearch " highlight search patterns as you type
+set laststatus=2 " always display the statusline
+set nobackup " this has to be disabled for writebackup to work as intended
+set noshowmode " hide default mode text (e.g. INSERT under the statusline)
+set noswapfile " no no no no no no no no!
+set nowrap " don't wrap lines
+set number " show line numbers next to lines
+set scrolloff=15 " set 15 lines to the cursor when moving vertically using j/k
+set showcmd " show commands typed in vim
+set showtabline=1 " only show tabline when there's more than 1 tab
+set smartcase " ...unless we type a capital
+set updatetime=300 " set Vim's updatetime delay
+set visualbell " suppress audio/visual error bell
+set wildmenu " visual autocomplete for command menu
+set wildmode=list:longest,full " bash-like tab completion
+set writebackup " write backup before overwriting a file, delete it afterwards
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Indentation configurations
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set expandtab " tab becomes a shortcut to insert four spaces
+set shiftwidth=4 " number of spaces to use for auto indent
+set softtabstop=4 " number of spaces in tab when editing
+set tabstop=4 " number of VISUAL spaces for each tab respresentation
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Misc
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on " turn on syntax highlighting
+silent! colorscheme dracula " set desired color scheme
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autogroups
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+augroup configgroup
+    " clears all the autocmd's for the group
+    autocmd!
+    autocmd FileType javascript setlocal ts=2 sts=2
+    autocmd BufEnter Makefile setlocal noexpandtab
+augroup END

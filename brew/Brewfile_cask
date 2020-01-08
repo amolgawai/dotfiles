@@ -1,11 +1,5 @@
+cask 'appcleaner'
 cask "emacs"
-cask "font-arial"
-cask "font-arial-black"
-cask "font-microsoft-office"
-cask "font-source-code-pro"
-cask "font-source-code-pro-for-powerline"
-cask "font-times-new-roman"
-cask "font-verdana"
 cask "inkscape"
 cask "mark-text"
 cask "yt-music"
@@ -16,6 +10,7 @@ cask "avast-security"
 #cask "bartender"
 #cask "cyberduck"
 cask "docker"
+cask "dozer"
 cask "dropbox"
 #cask "fantastical"
 #cask "firefox"
@@ -45,4 +40,48 @@ cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
 cask "typora"
+cask 'vlc'
 #cask "zoomus"
+
+# quicklook plugins
+cask "qlcolorcode"
+cask "qlmarkdown"
+cask "webpquicklook"
+cask 'qlstephen'
+cask 'quicklook-json'
+cask 'qlprettypatch'
+cask 'quicklook-csv'
+#cask 'betterzipql'
+cask 'qlimagesize'
+cask 'suspicious-package'
+cask 'quicklookase'
+cask 'qlvideo'
+cask 'provisionql'
+cask 'quicklookapk'
+cask 'quicklook-pat'
+
+#fonts
+cask "font-arial"
+cask "font-arial-black"
+cask "font-microsoft-office"
+cask "font-source-code-pro"
+cask "font-source-code-pro-for-powerline"
+cask "font-times-new-roman"
+cask "font-verdana"
+cask 'font-anonymice-powerline'
+cask 'font-consolas-for-powerline'
+cask 'font-dejavu-sans-mono-for-powerline'
+cask 'font-droid-sans-mono-for-powerline'
+cask 'font-fira-mono-for-powerline'
+cask 'font-inconsolata-dz-for-powerline'
+cask 'font-inconsolata-for-powerline'
+cask 'font-inconsolata-g-for-powerline'
+cask 'font-liberation-mono-for-powerline'
+cask 'font-menlo-for-powerline'
+cask 'font-meslo-for-powerline'
+cask 'font-monofur-for-powerline'
+cask 'font-roboto-mono-for-powerline'
+cask 'font-source-code-pro-for-powerline'
+cask 'font-ubuntu-mono-derivative-powerline'
+cask 'font-hack'
+cask 'font-monoid'

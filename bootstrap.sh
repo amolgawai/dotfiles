@@ -2,7 +2,7 @@
 #
 # bootstrap installs things.
 
-cd "$(dirname "$0")/.."
+# cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
 set -e
@@ -49,6 +49,24 @@ function success() {
 
 function error() {
     coloredEcho "$1" red "========>"
+}
+
+function symlink() {
+    application=$1
+    point_to=$2
+    destination=$3
+    destination_dir=$(dirname "$destination")
+
+    if test ! -e "$destination_dir"; then
+        substep "Creating ${destination_dir}"
+        mkdir -p "$destination_dir"
+    fi
+    if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
+        substep "Symlinking for \"${application}\" done"
+    else
+        error "Symlinking for \"${application}\" failed"
+        exit 1
+    fi
 }
 
 function ask_for_sudo() {
@@ -116,10 +134,62 @@ function install_homebrew () {
             exit 1
         fi
     fi
+    # Make sure we’re using the latest Homebrew.
+    brew update
+
+    # Upgrade any already-installed formulae.
+    brew upgrade
 }
 
 function install_oh_my_zsh () {
-	info "Installing oh_my_zsh"
+    info "Installing oh_my_zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    success "Oh my zsh installation succeeded" 
+}
+
+function install_zsh_plugins () {
+    info "Installing powerlevel10k theme"
+    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+    info "Installing zsh-autosuggestions"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+    info "Installing fast-syntax-highlighting"
+    git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+    info "Installing alias-tips"
+    git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+    
+    success "zsh Plugin installation succeeded"
+}
+
+function setup_emacsadventures () {
+    info "setting up emacsadventures"
+    if test -d ~/code/emacsadventures; then
+        substep "emacsadventures available"
+    else
+        substep "downloading emacsadventures"
+        git clone https://github.com/amolgawai/emacsadventures.git ~/code/emacsadventures
+    fi
+    if  test ! -e ~/.emacs.d/emacsadventures; then
+        mkdir ~/.emacs.d/emacsadventures
+    fi
+    symlink "emacsadventure" ~/code/emacsadventures ~/.emacs.d/emacsadventures
+    echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" > myfile.txt
+    success "emacsadventures setup succeeded"
+}
+
+function create_directories () {
+    info "Creating basic directories"
+    if test -d ~/code; then
+        substep "code directory exists"
+    else
+        mkdir ~/code
+    fi
+    if test -d ~/.emacs.d; then
+        substep "backing up emacs directory"
+        mv ~/.emacs.d ~/.emacs.d.bak
+    fi
+    mkdir ~/.emacs.d
+    success "directory creation succeeded"
+    
 }
 
 function install_packages_with_brewfile() {
@@ -128,7 +198,8 @@ function install_packages_with_brewfile() {
     TAP=${DOTFILES_ROOT}/brew/Brewfile_tap
     BREW=${DOTFILES_ROOT}/brew/Brewfile_brew
     CASK=${DOTFILES_ROOT}/brew/Brewfile_cask
-    MAS=${DOTFILES_ROOT}/brew/Brewfile_mas
+#    MAS=${DOTFILES_ROOT}/brew/Brewfile_mas
+#    echo $TAP; echo $BREW; echo $CASK; echo $MAS
 
     if hash parallel 2>/dev/null; then
         substep "parallel already exists"
@@ -142,7 +213,8 @@ function install_packages_with_brewfile() {
         fi
     fi
 
-    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
+#    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
+    if (echo $TAP; echo $BREW; echo $CASK) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
         success "Brewfile packages are already installed"
     else
         if brew bundle --file="$TAP"; then
@@ -160,6 +232,30 @@ function install_packages_with_brewfile() {
             exit 1
         fi
     fi
+}
+
+
+function setup_symlinks() {
+#    APPLICATION_SUPPORT=~/Library/Application\ Support
+#    POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
+
+    info "Setting up symlinks"
+#    symlink "git" ${DOTFILES_REPO}/git/gitconfig ~/.gitconfig
+#    symlink "hammerspoon" ${DOTFILES_REPO}/hammerspoon ~/.hammerspoon
+#    symlink "karabiner" ${DOTFILES_REPO}/karabiner ~/.config/karabiner
+#    symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
+    symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
+    symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
+
+    # Disable shell login message
+#    symlink "hushlogin" /dev/null ~/.hushlogin
+
+#    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
+#    symlink "fish:functions"   ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions
+#    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
+#    symlink "fish:oh_my_fish"  ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
+
+    success "Symlinks successfully setup"
 }
 
 function setup_vim() {
@@ -222,16 +318,20 @@ function setup_tmux() {
 main() {
     ask_for_sudo
     install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
-	setup_gitconfig
+#	setup_gitconfig
 #	clone_dotfiles_repo
     install_homebrew
     install_packages_with_brewfile
+    install_oh_my_zsh
+    install_zsh_plugins
+    create_directories
+    setup_emacsadventures
 #    change_shell_to_fish
 #   install_pip_packages
 #    install_yarn_packages
-#    setup_symlinks # needed for setup_vim and setup_tmux
-    setup_vim
-    setup_tmux
+     setup_symlinks # needed for setup_vim and setup_tmux
+     setup_vim
+     setup_tmux
 #    update_hosts_file
 #    setup_macOS_defaults
 #    update_login_items

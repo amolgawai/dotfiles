@@ -1,0 +1,11 @@
+session_name: base
+
+start_directory: ~/
+
+windows:
+
+- window_name: base
+  panes:
+  - shell_command:
+    - null
+    focus: true
