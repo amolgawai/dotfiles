@@ -13,16 +13,16 @@ function coloredEcho() {
     local color="$2";
     local arrow="$3";
     if ! [[ $color =~ '^[0-9]$' ]] ; then
-       case $(echo $color | tr '[:upper:]' '[:lower:]') in
-        black) color=0 ;;
-        red) color=1 ;;
-        green) color=2 ;;
-        yellow) color=3 ;;
-        blue) color=4 ;;
-        magenta) color=5 ;;
-        cyan) color=6 ;;
-        white|*) color=7 ;; # white or invalid color
-       esac
+		case $(echo $color | tr '[:upper:]' '[:lower:]') in
+			black) color=0 ;;
+			red) color=1 ;;
+			green) color=2 ;;
+			yellow) color=3 ;;
+			blue) color=4 ;;
+			magenta) color=5 ;;
+			cyan) color=6 ;;
+			white|*) color=7 ;; # white or invalid color
+		esac
     fi
     tput bold;
     tput setaf "$color";
@@ -31,7 +31,7 @@ function coloredEcho() {
 }
 
 function user() {
-  printf "\r  [ \033[0;33m??\033[0m ] $1\n"
+	printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
 
@@ -74,7 +74,7 @@ function ask_for_sudo() {
     if sudo --validate; then
         # Keep-alive
         while true; do sudo --non-interactive true; \
-            sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
+					   sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
         success "Sudo password updated"
     else
         error "Sudo password update failed"
@@ -83,25 +83,25 @@ function ask_for_sudo() {
 }
 
 function setup_gitconfig() {
-  if ! [ -f git/gitconfig.local.symlink ]
-  then
-    info 'setup gitconfig'
+	if ! [ -f git/gitconfig.local.symlink ]
+	then
+		info 'setup gitconfig'
 
-    git_credential='cache'
-    if [ "$(uname -s)" == "Darwin" ]
-    then
-      git_credential='osxkeychain'
-    fi
+		git_credential='cache'
+		if [ "$(uname -s)" == "Darwin" ]
+		then
+			git_credential='osxkeychain'
+		fi
 
-    user ' - What is your github author name?'
-    read -e git_authorname
-    user ' - What is your github author email?'
-    read -e git_authoremail
+		user ' - What is your github author name?'
+		read -e git_authorname
+		user ' - What is your github author email?'
+		read -e git_authoremail
 
-    sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
+		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
 
-    success 'gitconfig'
-  fi
+		success 'gitconfig'
+	fi
 }
 
 function install_xcode_command_line_tools() {
@@ -142,33 +142,42 @@ function install_homebrew () {
 }
 
 function install_oh_my_zsh () {
-    info "Installing oh_my_zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    success "Oh my zsh installation succeeded"
+	if [! -e ~/.oh-my-zsh]; then
+		info "Installing oh_my_zsh"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+		success "Oh my zsh installation succeeded"
+	fi
 }
 
 function install_zsh_plugins () {
-    info "Installing powerlevel10k theme"
-    git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-    info "Installing zsh-autosuggestions"
-    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    info "Installing fast-syntax-highlighting"
-    git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-    info "Installing alias-tips"
-    git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+	info "Installing zsh theme and plugins"
+	if [ ! -e ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
+		substep "Installing powerlevel10k theme"
+		git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+	fi
+	if [ ! -e ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+		substep "Installing zsh-autosuggestions"
+		git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+	fi
+	if [ ! -e ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting ]; then
+		substep "Installing fast-syntax-highlighting"
+		git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
+	fi
+	if [ ! -e ~/.oh-my-zsh/custom/plugins/alias-tips ]; then
+		substep "Installing alias-tips"
+		git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+	fi
 
     success "zsh Plugin installation succeeded"
 }
 
 function setup_emacsadventures () {
     info "setting up emacsadventures"
-    if test -d ~/code/emacsadventures; then
-        substep "emacsadventures available"
-    else
+    if [ ! -e ~/code/emacsadventures ]; then
         substep "downloading emacsadventures"
         git clone https://github.com/amolgawai/emacsadventures.git ~/code/emacsadventures
     fi
-    if  test ! -e ~/.emacs.d/emacsadventures; then
+    if  [ ! -e ~/.emacs.d/emacsadventures ]; then
         mkdir ~/.emacs.d/emacsadventures
     fi
     symlink "emacsadventure" ~/code/emacsadventures ~/.emacs.d/emacsadventures
@@ -178,16 +187,14 @@ function setup_emacsadventures () {
 
 function create_directories () {
     info "Creating basic directories"
-    if test -d ~/code; then
-        substep "code directory exists"
-    else
+    if [ ! -e ~/code ]; then
         mkdir ~/code
     fi
-    if test -d ~/.emacs.d; then
-        substep "backing up emacs directory"
-        mv ~/.emacs.d ~/.emacs.d.bak
-    fi
-    mkdir ~/.emacs.d
+#    if [ -d ~/.emacs.d ]; then
+#        substep "backing up emacs directory"
+#        mv ~/.emacs.d ~/.emacs.d.bak
+#    fi
+#    mkdir ~/.emacs.d
     success "directory creation succeeded"
 
 }
@@ -198,8 +205,8 @@ function install_packages_with_brewfile() {
     TAP=${DOTFILES_ROOT}/brew/Brewfile_tap
     BREW=${DOTFILES_ROOT}/brew/Brewfile_brew
     CASK=${DOTFILES_ROOT}/brew/Brewfile_cask
-#    MAS=${DOTFILES_ROOT}/brew/Brewfile_mas
-#    echo $TAP; echo $BREW; echo $CASK; echo $MAS
+	#    MAS=${DOTFILES_ROOT}/brew/Brewfile_mas
+	#    echo $TAP; echo $BREW; echo $CASK; echo $MAS
 
     if hash parallel 2>/dev/null; then
         substep "parallel already exists"
@@ -213,7 +220,7 @@ function install_packages_with_brewfile() {
         fi
     fi
 
-#    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
+	#    if (echo $TAP; echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
     if (echo $TAP; echo $BREW; echo $CASK) | parallel --verbose --linebuffer -j 4 brew bundle check --file={} &> /dev/null; then
         success "Brewfile packages are already installed"
     else
@@ -236,25 +243,25 @@ function install_packages_with_brewfile() {
 
 
 function setup_symlinks() {
-#    APPLICATION_SUPPORT=~/Library/Application\ Support
-#    POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
+	#    APPLICATION_SUPPORT=~/Library/Application\ Support
+	#    POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
 
     info "Setting up symlinks"
-#    symlink "git" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
-#    symlink "hammerspoon" ${DOTFILES_ROOT}/hammerspoon ~/.hammerspoon
-#    symlink "karabiner" ${DOTFILES_ROOT}/karabiner ~/.config/karabiner
-#    symlink "powerline" ${DOTFILES_ROOT}/powerline ${POWERLINE_ROOT_ROOT}/powerline/config_files
+	#    symlink "git" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
+	#    symlink "hammerspoon" ${DOTFILES_ROOT}/hammerspoon ~/.hammerspoon
+	#    symlink "karabiner" ${DOTFILES_ROOT}/karabiner ~/.config/karabiner
+	#    symlink "powerline" ${DOTFILES_ROOT}/powerline ${POWERLINE_ROOT_ROOT}/powerline/config_files
     symlink "tmux" ${DOTFILES_ROOT}/tmux/tmux.conf ~/.tmux.conf
     symlink "vim" ${DOTFILES_ROOT}/vim/vimrc ~/.vimrc
 	symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
 
     # Disable shell login message
-#    symlink "hushlogin" /dev/null ~/.hushlogin
+	#    symlink "hushlogin" /dev/null ~/.hushlogin
 
-#    symlink "fish:completions" ${DOTFILES_ROOT}/fish/completions ~/.config/fish/completions
-#    symlink "fish:functions"   ${DOTFILES_ROOT}/fish/functions   ~/.config/fish/functions
-#    symlink "fish:config.fish" ${DOTFILES_ROOT}/fish/config.fish ~/.config/fish/config.fish
-#    symlink "fish:oh_my_fish"  ${DOTFILES_ROOT}/fish/oh_my_fish  ~/.config/omf
+	#    symlink "fish:completions" ${DOTFILES_ROOT}/fish/completions ~/.config/fish/completions
+	#    symlink "fish:functions"   ${DOTFILES_ROOT}/fish/functions   ~/.config/fish/functions
+	#    symlink "fish:config.fish" ${DOTFILES_ROOT}/fish/config.fish ~/.config/fish/config.fish
+	#    symlink "fish:oh_my_fish"  ${DOTFILES_ROOT}/fish/oh_my_fish  ~/.config/omf
 
     success "Symlinks successfully setup"
 }
@@ -319,23 +326,23 @@ function setup_tmux() {
 main() {
     ask_for_sudo
     install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
-#	setup_gitconfig
-#	clone_dotfiles_repo
+	#	setup_gitconfig
+	#	clone_dotfiles_repo
     install_homebrew
     install_packages_with_brewfile
     install_oh_my_zsh
     install_zsh_plugins
     create_directories
     setup_emacsadventures
-#    change_shell_to_fish
-#   install_pip_packages
-#    install_yarn_packages
-     setup_symlinks # needed for setup_vim and setup_tmux
-     setup_vim
-     setup_tmux
-#    update_hosts_file
-#    setup_macOS_defaults
-#    update_login_items
+	#    change_shell_to_fish
+	#   install_pip_packages
+	#    install_yarn_packages
+    setup_symlinks # needed for setup_vim and setup_tmux
+    setup_vim
+    setup_tmux
+	#    update_hosts_file
+	#    setup_macOS_defaults
+	#    update_login_items
 }
 
 main "$@"
