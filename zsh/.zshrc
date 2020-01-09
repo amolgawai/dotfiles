@@ -79,6 +79,9 @@ plugins=(
     git-extras
     emacs
     dirhistory
+    zsh-autosuggestions
+    fast-syntax-highlighting
+    alias-tips
 )
 
 source $ZSH/oh-my-zsh.sh
