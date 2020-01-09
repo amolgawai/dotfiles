@@ -144,7 +144,7 @@ function install_homebrew () {
 function install_oh_my_zsh () {
     info "Installing oh_my_zsh"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    success "Oh my zsh installation succeeded" 
+    success "Oh my zsh installation succeeded"
 }
 
 function install_zsh_plugins () {
@@ -156,7 +156,7 @@ function install_zsh_plugins () {
     git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
     info "Installing alias-tips"
     git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
-    
+
     success "zsh Plugin installation succeeded"
 }
 
@@ -189,7 +189,7 @@ function create_directories () {
     fi
     mkdir ~/.emacs.d
     success "directory creation succeeded"
-    
+
 }
 
 function install_packages_with_brewfile() {
@@ -240,20 +240,21 @@ function setup_symlinks() {
 #    POWERLINE_ROOT_REPO=/usr/local/lib/python3.7/site-packages
 
     info "Setting up symlinks"
-#    symlink "git" ${DOTFILES_REPO}/git/gitconfig ~/.gitconfig
-#    symlink "hammerspoon" ${DOTFILES_REPO}/hammerspoon ~/.hammerspoon
-#    symlink "karabiner" ${DOTFILES_REPO}/karabiner ~/.config/karabiner
-#    symlink "powerline" ${DOTFILES_REPO}/powerline ${POWERLINE_ROOT_REPO}/powerline/config_files
-    symlink "tmux" ${DOTFILES_REPO}/tmux/tmux.conf ~/.tmux.conf
-    symlink "vim" ${DOTFILES_REPO}/vim/vimrc ~/.vimrc
+#    symlink "git" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
+#    symlink "hammerspoon" ${DOTFILES_ROOT}/hammerspoon ~/.hammerspoon
+#    symlink "karabiner" ${DOTFILES_ROOT}/karabiner ~/.config/karabiner
+#    symlink "powerline" ${DOTFILES_ROOT}/powerline ${POWERLINE_ROOT_ROOT}/powerline/config_files
+    symlink "tmux" ${DOTFILES_ROOT}/tmux/tmux.conf ~/.tmux.conf
+    symlink "vim" ${DOTFILES_ROOT}/vim/vimrc ~/.vimrc
+	symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
 
     # Disable shell login message
 #    symlink "hushlogin" /dev/null ~/.hushlogin
 
-#    symlink "fish:completions" ${DOTFILES_REPO}/fish/completions ~/.config/fish/completions
-#    symlink "fish:functions"   ${DOTFILES_REPO}/fish/functions   ~/.config/fish/functions
-#    symlink "fish:config.fish" ${DOTFILES_REPO}/fish/config.fish ~/.config/fish/config.fish
-#    symlink "fish:oh_my_fish"  ${DOTFILES_REPO}/fish/oh_my_fish  ~/.config/omf
+#    symlink "fish:completions" ${DOTFILES_ROOT}/fish/completions ~/.config/fish/completions
+#    symlink "fish:functions"   ${DOTFILES_ROOT}/fish/functions   ~/.config/fish/functions
+#    symlink "fish:config.fish" ${DOTFILES_ROOT}/fish/config.fish ~/.config/fish/config.fish
+#    symlink "fish:oh_my_fish"  ${DOTFILES_ROOT}/fish/oh_my_fish  ~/.config/omf
 
     success "Symlinks successfully setup"
 }
