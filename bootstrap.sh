@@ -253,7 +253,10 @@ function setup_symlinks() {
 	#    symlink "powerline" ${DOTFILES_ROOT}/powerline ${POWERLINE_ROOT_ROOT}/powerline/config_files
     symlink "tmux" ${DOTFILES_ROOT}/tmux/tmux.conf ~/.tmux.conf
     symlink "vim" ${DOTFILES_ROOT}/vim/vimrc ~/.vimrc
-	symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
+
+    symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
+    symlink "aliases" ${DOTFILES_ROOT}/zsh/.zsh_aliases ~/.zsh_aliases
+    symlink "functions" ${DOTFILES_ROOT}/zsh/.functions ~/.functions
 
     # Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin

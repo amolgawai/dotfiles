@@ -69,6 +69,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
+    git-extras
     brew
     npm
     osx
@@ -115,11 +116,16 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # all aliases are in a separate file
-if [ -f ~/.zsh_aliases ]; then
-    source ~/.zsh_aliases
-else
-    print "404: ~/.zsh_aliases not found."
-fi
+
+
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.zsh_local  can be used for other settings you don’t want to commit.
+for file in ~/.{path,zsh_aliases,functions,zsh.local}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
+
 
 eval $(thefuck --alias)
 source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
