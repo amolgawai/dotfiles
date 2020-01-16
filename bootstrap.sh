@@ -69,6 +69,16 @@ function symlink() {
     fi
 }
 
+function pull_latest() {
+    substep "Pulling latest changes in ${1} repository"
+    if git -C $1 pull origin master &> /dev/null; then
+        return
+    else
+        error "Please pull latest changes in ${1} repository manually"
+    fi
+}
+
+
 function ask_for_sudo() {
     info "Prompting for sudo password"
     if sudo --validate; then
@@ -228,7 +238,8 @@ function install_packages_with_brewfile() {
             substep "Brewfile_tap installation succeeded"
 
             export HOMEBREW_CASK_OPTS="--no-quarantine"
-            if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
+            #            if (echo $BREW; echo $CASK; echo $MAS) | parallel --verbose --linebuffer -j 3 brew bundle --file={}; then
+            if (echo $BREW; echo $CASK) | parallel --verbose --linebuffer -j 2 brew bundle --file={}; then
                 success "Brewfile packages installation succeeded"
             else
                 error "Brewfile packages installation failed"

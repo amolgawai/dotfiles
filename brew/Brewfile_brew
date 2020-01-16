@@ -2,11 +2,10 @@ brew "automake"
 brew "ack"
 brew "awscli"
 brew "bash-completion"
-brew bat # a featurful cat replacement
+brew 'bat' # a featurful cat replacement
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
-#brew "emacs --with-librsvg --with-imagemagick@6"
 brew "libvpx"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "findutils"
@@ -63,6 +62,4 @@ brew "wifi-password"
 brew "youtube-dl"
 brew "z"
 brew 'zsh-completions'
-# brew "heroku/brew/heroku"
-# brew "homebrew/emacs/markdown-mode"
 brew "srkomodo/tap/shadowfox-updater"
