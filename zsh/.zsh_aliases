@@ -12,7 +12,7 @@
 # alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias c="cd ~/code"
+alias dcode="cd ~/code"
 # Not necessary due to oh-my-zsh git plugin
 # alias g="git"
 alias cls='clear'

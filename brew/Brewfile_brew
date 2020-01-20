@@ -17,6 +17,7 @@ brew "git"
 brew "git-extras"
 brew "git-lfs"
 brew "git-open"
+brew 'gnuplot'
 brew "gnu-tar"
 brew "go"
 brew "graphicsmagick"

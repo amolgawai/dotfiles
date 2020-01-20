@@ -152,7 +152,7 @@ function install_homebrew () {
 }
 
 function install_oh_my_zsh () {
-	if [! -e ~/.oh-my-zsh]; then
+	if [ ! -e ~/.oh-my-zsh]; then
 		info "Installing oh_my_zsh"
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 		success "Oh my zsh installation succeeded"
@@ -352,11 +352,12 @@ main() {
 	#   install_pip_packages
 	#    install_yarn_packages
     setup_symlinks # needed for setup_vim and setup_tmux
-    setup_vim
-    setup_tmux
+#    setup_vim
+#    setup_tmux
 	#    update_hosts_file
 	#    setup_macOS_defaults
-	#    update_login_items
+    #    update_login_items
+    success "Setup complete - Enjoy"
 }
 
 main "$@"
