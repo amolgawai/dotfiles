@@ -295,27 +295,29 @@ function setup_symlinks() {
 
 function setup_vim() {
     info "Setting up vim"
-    substep "Installing Vundle"
-    if test -e ~/.vim/bundle/Vundle.vim; then
-        substep "Vundle already exists"
-        pull_latest ~/.vim/bundle/Vundle.vim
-        substep "Pull successful in Vundle's repository"
-    else
-        url=https://github.com/VundleVim/Vundle.vim.git
-        if git clone "$url" ~/.vim/bundle/Vundle.vim; then
-            substep "Vundle installation succeeded"
-        else
-            error "Vundle installation failed"
-            exit 1
-        fi
-    fi
-    substep "Installing all plugins"
-    if vim +PluginInstall +qall 2> /dev/null; then
-        substep "Plugins installations succeeded"
-    else
-        error "Plugins installations failed"
-        exit 1
-    fi
+    cloneOrUpdate ~/.vim_runtime "--depth=1 https://github.com/amix/vimrc.git"
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
+    # substep "Installing Vundle"
+    # if test -e ~/.vim/bundle/Vundle.vim; then
+    #     substep "Vundle already exists"
+    #     pull_latest ~/.vim/bundle/Vundle.vim
+    #     substep "Pull successful in Vundle's repository"
+    # else
+    #     url=https://github.com/VundleVim/Vundle.vim.git
+    #     if git clone "$url" ~/.vim/bundle/Vundle.vim; then
+    #         substep "Vundle installation succeeded"
+    #     else
+    #         error "Vundle installation failed"
+    #         exit 1
+    #     fi
+    # fi
+    # substep "Installing all plugins"
+    # if vim +PluginInstall +qall 2> /dev/null; then
+    #     substep "Plugins installations succeeded"
+    # else
+    #     error "Plugins installations failed"
+    #     exit 1
+    # fi
     success "vim successfully setup"
 }
 
@@ -369,7 +371,7 @@ main() {
     #   install_pip_packages
     #    install_yarn_packages
     setup_symlinks # needed for setup_vim and setup_tmux
-    #    setup_vim
+    setup_vim
     setup_tmux
     #    update_hosts_file
     #    setup_macOS_defaults
