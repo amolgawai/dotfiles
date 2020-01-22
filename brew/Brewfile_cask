@@ -1,4 +1,5 @@
 cask 'appcleaner'
+cask 'clipy'
 cask "emacs"
 cask "inkscape"
 cask "mark-text"
@@ -8,6 +9,7 @@ cask "yt-music"
 cask "alfred"
 cask "avast-security"
 #cask "bartender"
+cask 'cheatsheet'
 #cask "cyberduck"
 cask "docker"
 cask "dozer" # hide statusbar icons, bartender alternative
@@ -61,6 +63,7 @@ cask 'qlvideo'
 cask 'provisionql'
 cask 'quicklookapk'
 cask 'quicklook-pat'
+cask 'jupyter-notebook-ql'
 
 #fonts
 cask "font-arial"
