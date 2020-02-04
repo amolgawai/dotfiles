@@ -6,6 +6,7 @@ nnoremap H gT
 nnoremap L gt
 " This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :nohlsearch<CR><CR>
+set notimeout " Needed for which key
 nnoremap <silent> <leader> :<c-u>WhichKey  ','<CR>
 "autoload the vimrc - ref https://stackoverflow.com/questions/2400264/is-it-possible-to-apply-vim-configurations-without-restarting
 augroup myvimrc
