@@ -7,10 +7,13 @@ brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
 brew "libvpx"
+brew "fd"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "findutils"
 # brew "fish"
 brew "flake8" # for linting Python files
+brew "fzf"
+brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
 brew "ghostscript"
 brew "git"
