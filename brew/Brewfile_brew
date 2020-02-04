@@ -3,6 +3,7 @@ brew "ack"
 brew "awscli"
 brew "bash-completion"
 brew 'bat' # a featurful cat replacement
+brew "broot" # a powerful directory explorer
 brew "cmake" # for YouCompleteMe vim plugin
 brew "coreutils" # for awesome commands like timeout
 brew "diff-so-fancy"
