@@ -56,6 +56,7 @@ brew "redis"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
+brew "tmuxinator"
 brew "trash"
 brew "tree"
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
