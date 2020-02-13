@@ -48,3 +48,8 @@ windows:
       panes:
         -
         - vim
+  - explorer:
+      layout: even-horizontal
+      panes:
+        - br
+        - ranger
