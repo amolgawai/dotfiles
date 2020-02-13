@@ -301,6 +301,12 @@ function setup_symlinks() {
     success "Symlinks successfully setup"
 }
 
+function setup_spacevim() {
+  info "Setting up Spacevim"
+  curl -sLf https://spacevim.org/install.sh | bash
+  success "Spacevim setup complete"
+}
+
 function setup_vim() {
     info "Setting up vim"
     cloneOrUpdate ~/.vim_runtime "--depth=1 https://github.com/amix/vimrc.git"
