@@ -182,22 +182,17 @@ function install_oh_my_zsh () {
 
 function install_zsh_plugins () {
     info "Installing zsh theme and plugins"
-    if [ ! -e ~/.oh-my-zsh/custom/themes/powerlevel10k ]; then
 	substep "Installing powerlevel10k theme"
-	git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
-    fi
-    if [ ! -e ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]; then
+  cloneOrUpdate ~/.oh-my-zsh/custom/themes/powerlevel10k https://github.com/romkatv/powerlevel10k.git
+
 	substep "Installing zsh-autosuggestions"
-	git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-    fi
-    if [ ! -e ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting ]; then
+  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions https://github.com/zsh-autosuggestions
+
 	substep "Installing fast-syntax-highlighting"
-	git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
-    fi
-    if [ ! -e ~/.oh-my-zsh/custom/plugins/alias-tips ]; then
+  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting https://github.com/zdharma/fast-syntax-highlighting.git
+
 	substep "Installing alias-tips"
-	git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
-    fi
+  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/alias-tips https://github.com/djui/alias-tips.git
 
     success "zsh Plugin installation succeeded"
 }
