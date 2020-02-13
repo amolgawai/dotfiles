@@ -278,6 +278,7 @@ function setup_symlinks() {
     symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
     symlink "aliases" ${DOTFILES_ROOT}/zsh/.zsh_aliases ~/.zsh_aliases
     symlink "functions" ${DOTFILES_ROOT}/zsh/.functions ~/.functions
+    symlink "tmuxinator" ${DOTFILES_ROOT}/tmuxinator ~/.config/tmuxinator
 
     # Disable shell login message
     #    symlink "hushlogin" /dev/null ~/.hushlogin
