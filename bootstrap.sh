@@ -204,13 +204,7 @@ function install_zsh_plugins () {
 
 function setup_emacsadventures () {
     info "setting up emacsadventures"
-    if [ ! -e ~/code/emacsadventures ]; then
-        substep "downloading emacsadventures"
-        git clone https://github.com/amolgawai/emacsadventures.git ~/code/emacsadventures
-    fi
-    if  [ ! -e ~/.emacs.d/emacsadventures ]; then
-        mkdir ~/.emacs.d/emacsadventures
-    fi
+    cloneOrUpdate ~/code/emacsadventures https://github.com/amolgawai/emacsadventures.git
     symlink "emacsadventure" ~/code/emacsadventures ~/.emacs.d/emacsadventures
     echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" > ~/.emacs.d/init.el
     success "emacsadventures setup succeeded"
@@ -385,7 +379,8 @@ main() {
     #   install_pip_packages
     #    install_yarn_packages
     setup_symlinks # needed for setup_vim and setup_tmux
-    setup_vim
+    # setup_vim
+    setup_spacevim
     setup_tmux
     #    update_hosts_file
     #    setup_macOS_defaults
