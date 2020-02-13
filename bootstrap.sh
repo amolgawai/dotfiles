@@ -74,14 +74,14 @@ function symlink() {
         substep "Creating ${destination_dir}"
         mkdir -p "$destination_dir"
     fi
-    
+
     local currentSrc="$(readlink $destination)"
 
     if [ "$currentSrc" == "$point_to" ];then
-      info "link already exists"
-      exit 0
+        info "link already exists"
+        exit 0
     fi
-    
+
     if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
         substep "Symlinking for \"${application}\" done"
     else
@@ -182,17 +182,17 @@ function install_oh_my_zsh () {
 
 function install_zsh_plugins () {
     info "Installing zsh theme and plugins"
-	substep "Installing powerlevel10k theme"
-  cloneOrUpdate ~/.oh-my-zsh/custom/themes/powerlevel10k https://github.com/romkatv/powerlevel10k.git
+    substep "Installing powerlevel10k theme"
+    cloneOrUpdate ~/.oh-my-zsh/custom/themes/powerlevel10k https://github.com/romkatv/powerlevel10k.git
 
-	substep "Installing zsh-autosuggestions"
-  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions https://github.com/zsh-autosuggestions
+    substep "Installing zsh-autosuggestions"
+    cloneOrUpdate ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions https://github.com/zsh-autosuggestions
 
-	substep "Installing fast-syntax-highlighting"
-  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting https://github.com/zdharma/fast-syntax-highlighting.git
+    substep "Installing fast-syntax-highlighting"
+    cloneOrUpdate ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting https://github.com/zdharma/fast-syntax-highlighting.git
 
-	substep "Installing alias-tips"
-  cloneOrUpdate ~/.oh-my-zsh/custom/plugins/alias-tips https://github.com/djui/alias-tips.git
+    substep "Installing alias-tips"
+    cloneOrUpdate ~/.oh-my-zsh/custom/plugins/alias-tips https://github.com/djui/alias-tips.git
 
     success "zsh Plugin installation succeeded"
 }
@@ -291,9 +291,9 @@ function setup_symlinks() {
 }
 
 function setup_spacevim() {
-  info "Setting up Spacevim"
-  curl -sLf https://spacevim.org/install.sh | bash
-  success "Spacevim setup complete"
+    info "Setting up Spacevim"
+    curl -sLf https://spacevim.org/install.sh | bash
+    success "Spacevim setup complete"
 }
 
 function setup_vim() {
