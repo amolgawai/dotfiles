@@ -74,6 +74,14 @@ function symlink() {
         substep "Creating ${destination_dir}"
         mkdir -p "$destination_dir"
     fi
+    
+    local currentSrc="$(readlink $destination)"
+
+    if [ "$currentSrc" == "$point_to" ];then
+      info "link already exists"
+      exit 0
+    fi
+    
     if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
         substep "Symlinking for \"${application}\" done"
     else
