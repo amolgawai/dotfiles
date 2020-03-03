@@ -52,6 +52,7 @@ brew "poppler"
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "ranger"
 brew "redis"
+brew "ripgrep"
 #brew "ruby" # for Vim command-t plugin to work
 #brew "terraform"
 brew "thefuck"
