@@ -147,3 +147,8 @@ alias path='echo -e ${PATH//:/\\n}'
 
 # emacs doom
 alias doomacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile doom"
+alias doom="~/emacs-distros/doom-emacs/bin/doom"
+alias doomdoc="~/emacs-distros/doom-emacs/bin/doom doctor"
+alias doomsync="~/emacs-distros/doom-emacs/bin/doom sync"
+alias doomupgr="~/emacs-distros/doom-emacs/bin/doom upgrade"
+alias doomupdt="~/emacs-distros/doom-emacs/bin/doom update"
