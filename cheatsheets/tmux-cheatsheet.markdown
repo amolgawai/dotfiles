@@ -166,29 +166,6 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
     unbind Down
     bind Down last-window \; swap-pane -s tmp.1 \; kill-window -t tmp
 
-### Resources:
-
-* [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux)
-* [How to reorder windows](http://superuser.com/questions/343572/tmux-how-do-i-reorder-my-windows)
-
-### Notes:
-
-* 
-
-### Changelog:
-
-* 1411143833002 - Added [toggle zoom](#PanesSplits) under Panes (splits) section.
-* 1411143833002 - [Added Sync Panes](#syncPanes)
-* 1414276652677 - [Added Kill all tmux sessions ](#killAllSessions)
-* 1438585211173 - [corrected create and add next and previus thanks to @justinjhendrick](#WindowsTabs)
- 
-### Request an Update:
-
-We Noticed that our Cheatsheet is growing and people are coloberating to add new tips and tricks, so please tweet to me what would you like to add and let's make it better!
-
-* Twitter: [@MohammedAlaa](http://twitter.com/MohammedAlaa)
-
-
 ## oh-my-tmux
 ### Prefix
 tmux may be controlled from an attached client by using a key combination of a prefix key, followed by a command key. This configuration uses C-a as a secondary prefix while keeping C-b as the default prefix. In the following list of key bindings:
@@ -200,7 +177,6 @@ tmux may be controlled from an attached client by using a key combination of a p
 ### Bindings
 
     <prefix> e opens ~/.tmux.conf.local with the editor defined by the $EDITOR environment variable (defaults to vim when empty)
-
     <prefix> r reloads the configuration
 
 C-l clears both the screen and the tmux history
@@ -225,4 +201,6 @@ C-l clears both the screen and the tmux history
 
 
 ## References
-### [Bindings - oh-my-tmux](https://github.com/gpakosz/.tmux#bindings)
+  * [Bindings - oh-my-tmux](https://github.com/gpakosz/.tmux#bindings)
+  * [tmux: Productive Mouse-Free Development](http://pragprog.com/book/bhtmux/tmux)
+  * [How to reorder windows](http://superuser.com/questions/343572/tmux-how-do-i-reorder-my-windows)
