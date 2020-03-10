@@ -4,6 +4,7 @@
 
 # cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
+EMACS_DISTROS=~/code/emacs-distros
 
 set -e
 
@@ -34,6 +35,15 @@ function user() {
     printf "\r  [ \033[0;33m??\033[0m ] $1\n"
 }
 
+function mkDirIfDoesNotExist() {
+    folder=$1
+    if [ ! -e $folder ]; then
+        mkdir $folder
+		success "$folder created"
+    else
+        info "$folder exists"
+    fi
+}
 
 function info() {
     coloredEcho "$1" blue "========>"
@@ -51,8 +61,7 @@ function error() {
     coloredEcho "$1" red "========>"
 }
 
-function cloneOrUpdate()
-{
+function cloneOrUpdate() {
     folder=$1
     if [ -d $folder ]; then
         # echo Found $folder
@@ -197,19 +206,50 @@ function install_zsh_plugins () {
     success "zsh Plugin installation succeeded"
 }
 
+function setup_emacs_distros {
+	info "setting up multiple emacs distributions"
+    setup_chemacs
+    setup_emacsadventures
+    setup_doom_emacs
+    success "emacs distributions are ready"
+}
 function setup_emacsadventures () {
-    info "setting up emacsadventures"
-    cloneOrUpdate ~/code/emacsadventures https://github.com/amolgawai/emacsadventures.git
-    symlink "emacsadventure" ~/code/emacsadventures ~/.emacs.d/emacsadventures
+    substep "setting up emacsadventures"
+    EMCADVTR=${EMACS_DISTROS}/emacsadventures
+    cloneOrUpdate $EMCADVTR https://github.com/amolgawai/emacsadventures.git
+    symlink "emacsadventure" $EMCADVTR ~/.emacs.d/emacsadventures
     echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" > ~/.emacs.d/init.el
     success "emacsadventures setup succeeded"
 }
 
+function setup_chemacs () {
+    substep "setting up chemacs"
+    CHEMACS=${EMACS_DISTROS}/chemacs
+    cloneOrUpdate $CHEMACS https://github.com/plexus/chemacs.git
+    $CHEMACS/install.sh
+    symlink "chemacs-profiles" ${DOTFILES_ROOT}/emacs/emacs-profiles.el ~/.emacs-profiles.el
+    success "chemacs setup completed"
+}
+
+function setup_doom_emacs {
+    substep "setting up doom emacs"
+    DOOMACS=${EMACS_DISTROS}/doom-emacs
+    DOMMACSBIN=${DOOMACS}/bin/doom
+    cloneOrUpdate $DOOMACS https://github.com/hlissner/doom-emacs
+    $DOOMACSBIN install
+    symlink "doom-dir" ${DOTFILES_ROOT}/emacs/.doom.d ~/.doom.d
+    $DOOMACSBIN update
+    $DOOMACSBIN sync
+    success "doom emacs installation completed"
+}
+
 function create_directories () {
     info "Creating basic directories"
-    if [ ! -e ~/code ]; then
-        mkdir ~/code
-    fi
+    mkDirIfDoesNotExist ~/code
+	mkDirIfDoesNotExist ${EMACS_DISTROS}
+    # if [ ! -e ~/code ]; then
+    #     mkdir ~/code
+    # fi
     #    if [ -d ~/.emacs.d ]; then
     #        substep "backing up emacs directory"
     #        mv ~/.emacs.d ~/.emacs.d.bak
@@ -370,7 +410,7 @@ main() {
     install_oh_my_zsh
     install_zsh_plugins
     create_directories
-    setup_emacsadventures
+    setup_emacs_distros
     #    change_shell_to_fish
     #   install_pip_packages
     #    install_yarn_packages
