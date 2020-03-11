@@ -14,16 +14,16 @@ function coloredEcho() {
     local color="$2";
     local arrow="$3";
     if ! [[ $color =~ '^[0-9]$' ]] ; then
-	case $(echo $color | tr '[:upper:]' '[:lower:]') in
-	    black) color=0 ;;
-	    red) color=1 ;;
-	    green) color=2 ;;
-	    yellow) color=3 ;;
-	    blue) color=4 ;;
-	    magenta) color=5 ;;
-	    cyan) color=6 ;;
-	    white|*) color=7 ;; # white or invalid color
-	esac
+		case $(echo $color | tr '[:upper:]' '[:lower:]') in
+			black) color=0 ;;
+			red) color=1 ;;
+			green) color=2 ;;
+			yellow) color=3 ;;
+			blue) color=4 ;;
+			magenta) color=5 ;;
+			cyan) color=6 ;;
+			white|*) color=7 ;; # white or invalid color
+		esac
     fi
     tput bold;
     tput setaf "$color";
@@ -114,7 +114,7 @@ function ask_for_sudo() {
     if sudo --validate; then
         # Keep-alive
         while true; do sudo --non-interactive true; \
-		       sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
+					   sleep 10; kill -0 "$$" || exit; done 2>/dev/null &
         success "Sudo password updated"
     else
         error "Sudo password update failed"
@@ -125,22 +125,22 @@ function ask_for_sudo() {
 function setup_gitconfig() {
     if ! [ -f git/gitconfig.local.symlink ]
     then
-	info 'setup gitconfig'
+		info 'setup gitconfig'
 
-	git_credential='cache'
-	if [ "$(uname -s)" == "Darwin" ]
-	then
-	    git_credential='osxkeychain'
-	fi
+		git_credential='cache'
+		if [ "$(uname -s)" == "Darwin" ]
+		then
+			git_credential='osxkeychain'
+		fi
 
-	user ' - What is your github author name?'
-	read -e git_authorname
-	user ' - What is your github author email?'
-	read -e git_authoremail
+		user ' - What is your github author name?'
+		read -e git_authorname
+		user ' - What is your github author email?'
+		read -e git_authoremail
 
-	sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
+		sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" -e "s/GIT_CREDENTIAL_HELPER/$git_credential/g" git/gitconfig.local.symlink.example > git/gitconfig.local.symlink
 
-	success 'gitconfig'
+		success 'gitconfig'
     fi
 }
 
@@ -183,9 +183,9 @@ function install_homebrew () {
 
 function install_oh_my_zsh () {
     if [ ! -e ~/.oh-my-zsh]; then
-	info "Installing oh_my_zsh"
-	sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	success "Oh my zsh installation succeeded"
+		info "Installing oh_my_zsh"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+		success "Oh my zsh installation succeeded"
     fi
 }
 
@@ -213,6 +213,7 @@ function setup_emacs_distros {
     setup_doom_emacs
     success "emacs distributions are ready"
 }
+
 function setup_emacsadventures () {
     substep "setting up emacsadventures"
     EMCADVTR=${EMACS_DISTROS}/emacsadventures
