@@ -2,7 +2,7 @@
 #
 # bootstrap installs things.
 
-# cd "$(dirname "$0")/.."
+# directories
 DOTFILES_ROOT=$(pwd -P)
 EMACS_DISTROS=~/code/emacs-distros
 
@@ -107,7 +107,6 @@ function pull_latest() {
         error "Please pull latest changes in ${1} repository manually"
     fi
 }
-
 
 function ask_for_sudo() {
     info "Prompting for sudo password"
@@ -302,7 +301,6 @@ function install_packages_with_brewfile() {
         fi
     fi
 }
-
 
 function setup_symlinks() {
     #    APPLICATION_SUPPORT=~/Library/Application\ Support
