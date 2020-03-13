@@ -1,4 +1,11 @@
+# convert all markdown files to org mode
+function mkdToOrg() {
+    for f in `ls *.md`; do 
+        pandoc -f markdown -t org -o ${f}.org ${f}; 
+    done
+}
 
+# create a directory and cd into it
 function mkd() {
 	mkdir -p "$@" && cd "$_";
 }
