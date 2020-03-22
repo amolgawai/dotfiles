@@ -227,14 +227,14 @@ function setup_chemacs () {
     CHEMACS=${EMACS_DISTROS}/chemacs
     cloneOrUpdate $CHEMACS https://github.com/plexus/chemacs.git
     $CHEMACS/install.sh
-    symlink "chemacs-profiles" ${DOTFILES_ROOT}/emacs/emacs-profiles.el ~/.emacs-profiles.el
+    symlink "chemacs-profiles" ${DOTFILES_ROOT}/emacs/.emacs-profiles.el ~/.emacs-profiles.el
     success "chemacs setup completed"
 }
 
 function setup_doom_emacs {
     substep "setting up doom emacs"
     DOOMACS=${EMACS_DISTROS}/doom-emacs
-    DOMMACSBIN=${DOOMACS}/bin/doom
+    DOOMACSBIN=${DOOMACS}/bin/doom
     cloneOrUpdate $DOOMACS https://github.com/hlissner/doom-emacs
     $DOOMACSBIN install
     symlink "doom-dir" ${DOTFILES_ROOT}/emacs/.doom.d ~/.doom.d
@@ -414,7 +414,7 @@ main() {
     #   install_pip_packages
     #    install_yarn_packages
     setup_symlinks # needed for setup_vim and setup_tmux
-    # setup_vim
+    setup_vim
     setup_spacevim
     setup_tmux
     #    update_hosts_file
