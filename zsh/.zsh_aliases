@@ -152,3 +152,6 @@ alias doomdoc="~/code/emacs-distros/doom-emacs/bin/doom doctor"
 alias doomsync="~/code/emacs-distros/doom-emacs/bin/doom sync"
 alias doomupgr="~/code/emacs-distros/doom-emacs/bin/doom upgrade"
 alias doomupdt="~/code/emacs-distros/doom-emacs/bin/doom update"
+
+# magit for git
+alias magit='emacsclient -n -e \(magit-status\)'
