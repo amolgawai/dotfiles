@@ -28,7 +28,7 @@
 ;; FIXME:- change the doom-emacs directory to ~/code/emacs-distros/doom-emacs
 
 (("default" . ((user-emacs-directory . "~/.emacs.d")))
- ("doom" .((user-emacs-directory . "~/emacs-distros/doom-emacs"))))
+ ("doom" .((user-emacs-directory . "~/code/emacs-distros/doom-emacs"))))
 
 (provide '.emacs-profiles)
 ;;; .emacs-profiles.el ends here
