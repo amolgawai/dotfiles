@@ -17,6 +17,7 @@ brew "flake8" # for linting Python files
 brew "fzf"
 brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
+brew "glances" # cli system monitor
 brew "ghostscript"
 brew "git"
 brew "git-extras"
