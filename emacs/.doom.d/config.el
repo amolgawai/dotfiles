@@ -50,6 +50,17 @@
     (setq imenu-list-auto-resize t)            ;; resize automatically
     (setq imenu-list-focus-after-activation t))
 
+  (use-package! org-journal
+    :after org
+    :custom
+    (org-journal-dir (concat (file-name-as-directory org-directory) "journal"))
+    (org-journal-file-format "%Y/%m/%Y%m%d")
+    (org-journal-date-format "%A, %Y-%m-%d")
+    ;; (org-journal-encrypt-journal t)
+    ;; (org-journal-enable-encryption nil)
+    (org-journal-enable-agenda-integration t))
+
+
   ;; Here are some additional functions/macros that could help you configure Doom:
   ;;
   ;; - `load!' for loading external *.el files relative to this one
