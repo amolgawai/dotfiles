@@ -88,14 +88,14 @@ function symlink() {
 
     if [ "$currentSrc" == "$point_to" ];then
         info "link already exists"
-        exit 0
+        return 0
     fi
 
     if rm -rf "$destination" && ln -s "$point_to" "$destination"; then
         substep "Symlinking for \"${application}\" done"
     else
         error "Symlinking for \"${application}\" failed"
-        exit 1
+        return 1
     fi
 }
 
