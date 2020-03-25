@@ -20,6 +20,9 @@ if hash bat; then
     alias cat='bat'
 fi
 
+# use python3 - for macos mostly
+alias python=/usr/local/bin/python3
+alias pip=/usr/local/bin/pip3
 
 # using the oh-my-zsh aliases instead of following for ls
 # List all files colorized in long format
