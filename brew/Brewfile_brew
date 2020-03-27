@@ -1,4 +1,5 @@
 brew "automake"
+brew "autojump"
 brew "ack"
 brew "awscli"
 brew "bash-completion"
