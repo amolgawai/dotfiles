@@ -134,3 +134,5 @@ eval $(thefuck --alias)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 source /Users/$USER/Library/Preferences/org.dystroy.broot/launcher/bash/br
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
