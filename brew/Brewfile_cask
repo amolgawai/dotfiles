@@ -1,4 +1,5 @@
 cask 'appcleaner'
+cask 'beardedspice'                 # control media including web players
 cask 'clipy'
 cask "emacs"
 cask "inkscape"
@@ -10,24 +11,26 @@ cask "alfred"
 cask "avast-security"
 #cask "bartender"
 cask 'cheatsheet'
+cask 'cpuinfo'
 #cask "cyberduck"
 cask "docker"
-cask "dozer" # hide statusbar icons, bartender alternative
+cask "dozer"                        # hide statusbar icons, bartender alternative
 cask "dropbox"
 #cask "fantastical"
 #cask "firefox"
 cask "font-fira-mono-for-powerline" # for iTerm2 powerline
-cask "fork" # free macos git frontend
+cask "fork"                         # free macos git frontend
 cask "foxitreader"
 cask "gimp"
 #cask "google-chrome"
 #cask "google-cloud-sdk"
 #cask "hammerspoon"
+cask 'iglance'
 #cask "iina"
 cask "insomnia"
 cask "iterm2"
 cask "itsycal"
-cask "kap" # open source screen recorder
+cask "kap"                          # open source screen recorder
 cask "karabiner-elements"
 #cask "libreoffice"
 #cask "ngrok"
@@ -37,7 +40,7 @@ cask "karabiner-elements"
 #cask "robo-3t"
 cask "rectangle"
 #cask "slack"
-cask "spectacle" # open source window manager
+cask "spectacle"                    # open source window manager
 #cask "spotify"
 cask "sublime-text"
 #cask "teamviewer"
