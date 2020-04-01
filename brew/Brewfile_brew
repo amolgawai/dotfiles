@@ -38,6 +38,7 @@ brew "hunspell"
 brew "imagemagick"
 brew "jq"
 brew "lazygit"
+brew "lf"    # console file manager written in go
 brew "mas"
 #brew "mongodb-community"
 brew "multimarkdown"
