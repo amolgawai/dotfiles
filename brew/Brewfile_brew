@@ -6,6 +6,7 @@ brew "bash-completion"
 brew 'bat' # a featurful cat replacement
 brew "broot" # a powerful directory explorer
 brew "cmake" # for YouCompleteMe vim plugin
+brew "command-tab-plus"
 brew "coreutils" # for awesome commands like timeout
 brew "ctags"
 brew "diff-so-fancy"
@@ -38,6 +39,7 @@ brew "hunspell"
 brew "imagemagick"
 brew "jq"
 brew "lazygit"
+brew "lf"    # console file manager written in go
 brew "mas"
 #brew "mongodb-community"
 brew "multimarkdown"
