@@ -6,7 +6,7 @@
 
 ## relative ranges
 
-    :.-2,.+8y
+    :.-2,.+8<command>
 
 ## join two lines
  pressing "J" at any place in the line you can combine the current line and the next line
