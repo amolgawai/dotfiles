@@ -136,3 +136,6 @@ eval $(thefuck --alias)
 source /Users/$USER/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# this is needed so as to make pyenv behave correctly
+eval "$(pyenv init -)"
