@@ -139,3 +139,4 @@ source /Users/$USER/Library/Preferences/org.dystroy.broot/launcher/bash/br
 
 # this is needed so as to make pyenv behave correctly
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
