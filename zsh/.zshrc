@@ -138,5 +138,10 @@ source /Users/$USER/Library/Preferences/org.dystroy.broot/launcher/bash/br
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # this is needed so as to make pyenv behave correctly
-eval "$(pyenv init -)"
+export PYENV_ROOT="${HOME}/.pyenv"
+
+if [ -d "${PYENV_ROOT}" ]; then
+    export PATH="${PYENV_ROOT}/bin:${PATH}"
+    eval "$(pyenv init -)"
+fi
 eval "$(pyenv virtualenv-init -)"
