@@ -15,7 +15,7 @@ brew "fd"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "findutils"
 # brew "fish"
-brew "flake8" # for linting Python files
+# brew "flake8" # for linting Python files
 brew "fzf"
 brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
