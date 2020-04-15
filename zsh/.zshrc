@@ -74,6 +74,7 @@ plugins=(
     npm
     osx
     python
+    poetry
     iterm2
     man
     go
@@ -145,3 +146,6 @@ if [ -d "${PYENV_ROOT}" ]; then
     eval "$(pyenv init -)"
 fi
 eval "$(pyenv virtualenv-init -)"
+
+# poetry initialization
+source $HOME/.poetry/env
