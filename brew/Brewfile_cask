@@ -76,6 +76,7 @@ cask "font-arial-black"
 cask "font-microsoft-office"
 cask "font-source-code-pro"
 cask "font-source-code-pro-for-powerline"
+cask "font-source-sans-pro"
 cask "font-times-new-roman"
 cask "font-verdana"
 cask 'font-anonymice-powerline'
