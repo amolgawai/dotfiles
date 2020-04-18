@@ -49,6 +49,7 @@ brew "p7zip"
 brew "parallel"
 brew "poppler" # to work with pdf files and merge/extract them for example
 brew "postgresql"
+brew "prettier"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "pyenv-virtualwrapper"
