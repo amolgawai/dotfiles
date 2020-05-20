@@ -149,3 +149,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # poetry initialization
 source $HOME/.poetry/env
+unalias grv
+
+# clangd path
+export PATH="/usr/local/opt/llvm/bin:$PATH"
