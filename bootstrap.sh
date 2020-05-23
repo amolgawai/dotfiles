@@ -338,6 +338,13 @@ function setup_symlinks() {
 	success "Symlinks successfully setup"
 }
 
+# FIXME - add this to other symlinking in above function
+function symlink_clang() {
+	ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
+	ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
+	ln -s "$(brew --prefix llvm)/bin/clangd" "/usr/local/bin/clangd"
+}
+
 function setup_spacevim() {
 	info "Setting up Spacevim"
 	curl -sLf https://spacevim.org/install.sh | bash
@@ -408,14 +415,14 @@ function setup_tmux() {
 }
 
 function setup_hunspell() {
-    info "Adding dictionaries to hunspell"
+	info "Adding dictionaries to hunspell"
 	cd ~/Library/Spelling/
-    substep "Adding English (UK) dictionary"
+	substep "Adding English (UK) dictionary"
 	wget http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_GB.aff
 	wget http://cgit.freedesktop.org/libreoffice/dictionaries/plain/en/en_GB.dic
 	ln -s en_GB.dic english.dic
 	ln -s en_GB.aff english.aff
-    success "hunspell setup complete"
+	success "hunspell setup complete"
 }
 
 main() {
@@ -436,7 +443,7 @@ main() {
 	setup_vim
 	setup_spacevim
 	setup_tmux
-    setup_hunspell
+	setup_hunspell
 	#    update_hosts_file
 	#    setup_macOS_defaults
 	#    update_login_items
