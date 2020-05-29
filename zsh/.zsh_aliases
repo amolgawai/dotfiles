@@ -158,3 +158,6 @@ alias doomupdt="~/code/emacs-distros/doom-emacs/bin/doom update"
 
 # magit for git
 alias magit='emacsclient -n -e \(magit-status\)'
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
