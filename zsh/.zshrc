@@ -77,7 +77,7 @@ plugins=(
     poetry
     iterm2
     man
-    go
+    golang
     git-extras
     emacs
     dirhistory
