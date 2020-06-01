@@ -51,6 +51,11 @@ cask "tunnelblick"
 cask "typora"
 cask 'vlc'
 #cask "zoomus"
+# vim guis for mac
+cask "vimr"
+cask "oni"
+# system tools for macos
+cask "onyx"
 
 # quicklook plugins
 cask "qlcolorcode"
