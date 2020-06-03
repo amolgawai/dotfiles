@@ -1,8 +1,8 @@
-;;; .emacs-profiles.el --- profiles tobe used with chemacs  -*- lexical-binding: t; -*-
+;;; init.el --- init file for elegant emacs          -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2020  Amol Gawai
 
-;; Author: Amol Gawai(("default" . ((user-emacs-directory . "~/.emacs.d"))) <amol@doesnot.exist>
+;; Author: Amol Gawai;; add the directory to load path <amol@doesnot.exist>
 ;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -20,16 +20,15 @@
 
 ;;; Commentary:
 
-;; chemacs provides ability to use different Emacs "distros".  It is done through having
-;; differnet "profiles" which are provided in this file
-;;
+;; load the custom configs for the elegant Emacs
 
 ;;; Code:
-;; FIXME:- change the doom-emacs directory to ~/code/emacs-distros/doom-emacs
 
-(("default" . ((user-emacs-directory . "~/.emacs.d")))
- ("elegant-emacs" . ((user-emacs-directory . "~/code/emacs-distros/elegantemacs")))
- ("doom" .((user-emacs-directory . "~/code/emacs-distros/doom-emacs"))))
 
-(provide '.emacs-profiles)
-;;; .emacs-profiles.el ends here
+(add-to-list 'load-path (locate-user-emacs-file "elegant-emacs"))
+
+(require 'sanity)
+(require 'elegance)
+
+(provide 'init)
+;;; init.el ends here

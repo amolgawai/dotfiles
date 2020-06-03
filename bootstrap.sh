@@ -211,6 +211,7 @@ function setup_emacs_distros() {
 	setup_chemacs
 	setup_emacsadventures
 	setup_doom_emacs
+    setup_elegent_emacs
 	success "emacs distributions are ready"
 }
 
@@ -242,6 +243,14 @@ function setup_doom_emacs() {
 	$DOOMACSBIN update
 	$DOOMACSBIN sync
 	success "doom emacs installation completed"
+}
+
+function setup_elegent_emacs() {
+    sustep "setting up elegent-emacs"
+    ELEMACS=$(EMACS_DISTROS)/elegantemacs
+    ELEMACSREPO=$(ELEMACS)/elegant-emacs
+    cloneOrUpdate $ELEMACSREPO https://github.com/rougier/elegant-emacs
+    symlink "elegant-emacs init" ${DOTFILES_ROOT}/emacs/elegantemacs/init.el ${ELEMACS}/init.el
 }
 
 function create_directories() {
