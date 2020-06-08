@@ -393,7 +393,8 @@ function setup_tmux() {
 	info "Installing Oh My Tmux! from https://github.com/gpakosz/.tmux"
 	cloneOrUpdate ~/.tmux https://github.com/gpakosz/.tmux.git
 	ln -s -f ~/.tmux/.tmux.conf ~/
-	cp ~/.tmux/.tmux.conf.local ~/
+    symlink "tmux config" ${DOTFILES_ROOT}/tmux/.tmux.conf.local ~/.tmux.conf.local
+	# cp ~/.tmux/.tmux.conf.local ~/
 	# substep "Installing tpm"
 	# if test -e ~/.tmux/plugins/tpm; then
 	#     substep "tpm already exists"
