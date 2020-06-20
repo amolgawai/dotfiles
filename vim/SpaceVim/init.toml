@@ -34,6 +34,7 @@ name = 'colorscheme'
 # productivity
 [[layers]]
 name = 'fzf'
+[[layers]]
 name = "tools"
 
 # Enable autocomplete layer

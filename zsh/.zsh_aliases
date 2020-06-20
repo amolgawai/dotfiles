@@ -156,8 +156,16 @@ alias doomsync="~/code/emacs-distros/doom-emacs/bin/doom sync"
 alias doomupgr="~/code/emacs-distros/doom-emacs/bin/doom upgrade"
 alias doomupdt="~/code/emacs-distros/doom-emacs/bin/doom update"
 
-#elegant emacs
+# elegant emacs
 alias elgntmacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile elegant-emacs"
+
+# super-emacs
+alias supermacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile super-emacs"
+
+# debug emacs on macos
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  alias dbgmacs="open -a /Applications/Emacs.app --args --debug-init"
+fi
 
 # magit for git
 alias magit='emacsclient -n -e \(magit-status\)'

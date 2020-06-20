@@ -28,6 +28,7 @@
 ;; FIXME:- change the doom-emacs directory to ~/code/emacs-distros/doom-emacs
 
 (("default" . ((user-emacs-directory . "~/.emacs.d")))
+ ("super-emacs" . ((user-emacs-directory . "~/code/emacs-distros/super-emacs/.emacs.d")))
  ("elegant-emacs" . ((user-emacs-directory . "~/code/emacs-distros/elegantemacs")))
  ("doom" .((user-emacs-directory . "~/code/emacs-distros/doom-emacs"))))
 

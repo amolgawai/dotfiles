@@ -215,6 +215,13 @@ function setup_emacs_distros() {
 	success "emacs distributions are ready"
 }
 
+function setup_superemacs() {
+    substep "setting up super emacs"
+    REPODEST=${EMACS_DISTROS}/super-emacs
+    cloneOrUpdate $REPODEST https://github.com/myTerminal/super-emacs.git
+    success "super-emacs setup complete"
+}
+
 function setup_emacsadventures() {
 	substep "setting up emacsadventures"
 	EMCADVTR=${EMACS_DISTROS}/emacsadventures
