@@ -45,7 +45,7 @@ windows:
       panes:
         -
         - ranger
-  - editor: nvim
+  - editor: vim
   - explorer:
       layout: even-horizontal
       panes:
