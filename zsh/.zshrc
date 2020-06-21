@@ -153,3 +153,6 @@ unalias grv
 
 # clangd path
 export PATH="/usr/local/opt/llvm/bin:$PATH"
+
+# fzf default command
+export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'

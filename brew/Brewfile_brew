@@ -1,3 +1,4 @@
+brew "ag"
 brew "automake"
 brew "autojump"
 brew "ack"
@@ -68,6 +69,7 @@ brew "rustup"
 #brew "ruby" # for Vim command-t plugin to work
 brew "shfmt" # formatter for shell mode
 #brew "terraform"
+brew "the_silver_searcher"
 brew "thefuck"
 brew "tldr"
 brew "tmux"
