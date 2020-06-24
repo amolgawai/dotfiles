@@ -221,6 +221,7 @@ function setup_scimax() {
     substep "setting up scimax"
     REPODEST=${EMACS_DISTROS}/scimax
     cloneOrUpdate $REPODEST https://github.com/jkitchin/scimax.git
+    symlink "scimax-user" ${DOTFILES_ROOT}/emacs/scimax-user.el $REPODEST/user/user.el
     success "scimax setup complete"
 }
 
