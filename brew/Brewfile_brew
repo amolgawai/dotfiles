@@ -80,7 +80,8 @@ brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 brew "vault"
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
-brew "macvim"
+# brew "macvim"
+brew "neovim"
 brew "wget"
 brew "wifi-password"
 #brew "yarn"

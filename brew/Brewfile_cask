@@ -34,6 +34,7 @@ cask "itsycal"
 cask "kap"                          # open source screen recorder
 cask "karabiner-elements"
 #cask "libreoffice"
+cask "mactex"
 #cask "ngrok"
 #cask "nordvpn"
 #cask "numi"

@@ -212,7 +212,16 @@ function setup_emacs_distros() {
 	setup_emacsadventures
 	setup_doom_emacs
     setup_elegent_emacs
+    setup_superemacs
+    setup_scimax
 	success "emacs distributions are ready"
+}
+
+function setup_scimax() {
+    substep "setting up scimax"
+    REPODEST=${EMACS_DISTROS}/scimax
+    cloneOrUpdate $REPODEST https://github.com/jkitchin/scimax.git
+    success "scimax setup complete"
 }
 
 function setup_superemacs() {

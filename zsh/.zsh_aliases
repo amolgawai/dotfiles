@@ -162,6 +162,9 @@ alias elgntmacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile ele
 # super-emacs
 alias supermacs="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile super-emacs"
 
+# scimax
+alias scimax="/Applications/Emacs.app/Contents/MacOS/Emacs --with-profile scimax"
+
 # debug emacs on macos
 if [[ "$OSTYPE" == "darwin"* ]]; then
   alias dbgmacs="open -a /Applications/Emacs.app --args --debug-init"
