@@ -31,6 +31,7 @@ brew "gitbatch"
 brew 'gnuplot'
 brew "gnu-tar"
 brew "go"
+brew "googler"                  # CLI google search tool
 brew "graphicsmagick"
 brew "grep"
 brew "gs"
@@ -45,6 +46,7 @@ brew "jq"
 brew "lazygit"
 brew "lf"    # console file manager written in go
 brew "llvm"
+brew "lynx"                     # CLI browser
 brew "clang-format"
 brew "mas"
 #brew "mongodb-community"

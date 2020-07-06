@@ -8,7 +8,7 @@ cask "yt-music"
 #cask "1password"
 #cask "1password-cli"
 cask "alfred"
-cask "avast-security"
+# cask "avast-security"
 #cask "bartender"
 cask 'cheatsheet'
 cask 'cpuinfo'
