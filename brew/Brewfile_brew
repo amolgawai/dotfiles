@@ -21,6 +21,7 @@ brew "fzf"
 brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
 brew "glances" # cli system monitor
+brew "gh"      # github CLI
 brew "ghostscript"
 brew "git"
 brew "git-extras"
@@ -28,6 +29,7 @@ brew "git-lfs"
 brew "git-open"
 brew "git-plus"
 brew "gitbatch"
+brew "gitgui"
 brew 'gnuplot'
 brew "gnu-tar"
 brew "go"
