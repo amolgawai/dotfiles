@@ -1,3 +1,4 @@
+cask 'alacritty'
 cask 'appcleaner'
 cask 'beardedspice'                 # control media including web players
 cask 'clipy'
