@@ -26,6 +26,8 @@
     # font
     guifont = "SourceCodePro Nerd Font Mono:h12"
     automatic_update = true
+    # File manager
+    filemanager = "defx"
 
 [[layers]]
 # UI layers
