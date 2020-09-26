@@ -12,6 +12,7 @@ brew "coreutils" # for awesome commands like timeout
 brew "ctags"
 brew "diff-so-fancy"
 brew "libvpx"
+brew "exa"   # fast ls replacement written in Rust
 brew "fd"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "findutils"
@@ -74,6 +75,7 @@ brew "ripgrep"
 brew "rustup"
 #brew "ruby" # for Vim command-t plugin to work
 brew "shfmt" # formatter for shell mode
+brew "starship" # customizable shell prompt written in Rust
 #brew "terraform"
 brew "the_silver_searcher"
 brew "thefuck"

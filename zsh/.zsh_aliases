@@ -179,3 +179,6 @@ fi
 # tmuxinator
 alias tmxstr="tmuxinator start default"
 alias tmxstp="tmuxinator stop default"
+
+# misc commands
+alias lg="lazygit"
