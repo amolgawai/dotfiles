@@ -28,10 +28,12 @@
     automatic_update = true
     # File manager
     filemanager = "defx"
+    # autocomplete
+    autocomplete_method = "coc"
 
 [[layers]]
 # UI layers
-name = 'colorscheme'
+name = "colorscheme"
 
 # productivity
 [[layers]]
@@ -41,10 +43,9 @@ name = "tools"
 
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-autocomplete_method = 'coc'
-auto-completion-return-key-behavior = "complete"
-auto-completion-tab-key-behavior = "smart"
+  name = 'autocomplete'
+  auto-completion-return-key-behavior = "complete"
+  auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
 name = 'shell'
