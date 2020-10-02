@@ -1,5 +1,9 @@
 # vim Tips and Tricks
 
+## Learning resources, references
+1. [vimcasts](http://vimcasts.org/)
+2. [Course on vimcasts](http://vimcasts.org/training/core-vim-course/)
+
 ## delete empty lines
 
     :g/^$/d
