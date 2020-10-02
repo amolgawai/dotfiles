@@ -172,8 +172,19 @@ fi
 
 # magit for git
 alias magit='emacsclient -n -e \(magit-status\)'
+
+# vim 
 if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
+fi
+
+if type fzf > /dev/null 2>&1; then
+  alias vimf='vim $(fzf)'
+fi
+
+# markdown viewer glow
+if type glow > /dev/null 2>&1; then
+  alias glow='glow -p'
 fi
 
 # tmuxinator

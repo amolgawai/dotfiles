@@ -23,6 +23,7 @@ brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
 brew "glances" # cli system monitor
 brew "gh"      # github CLI
+brew "glow"    # markdown CLI renderer
 brew "ghostscript"
 brew "git"
 brew "git-extras"
@@ -52,8 +53,10 @@ brew "llvm"
 brew "lynx"                     # CLI browser
 brew "clang-format"
 brew "mas"
+brew "mdcat"  # CLI markdown renderer
 #brew "mongodb-community"
 brew "multimarkdown"
+brew "navi"  # fzf powered cheatsheet tool
 #brew "node"
 brew "openssh"
 brew "p7zip"
@@ -83,6 +86,7 @@ brew "tldr"
 brew "tmux"
 brew "tmuxinator"
 brew "trash"
+brew "tre" # modern tree replacement
 brew "tree"
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 brew "vault"
