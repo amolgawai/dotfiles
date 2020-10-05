@@ -193,3 +193,8 @@ alias tmxstp="tmuxinator stop default"
 
 # misc commands
 alias lg="lazygit"
+
+# for helping vterm in emacs to clear screen
+if [[ "$INSIDE_EMACS" = 'vterm' ]]; then
+    alias clear='vterm_printf "51;Evterm-clear-scrollback";tput clear'
+fi
