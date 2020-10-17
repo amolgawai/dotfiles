@@ -79,6 +79,7 @@ brew "rustup"
 #brew "ruby" # for Vim command-t plugin to work
 brew "shfmt" # formatter for shell mode
 brew "starship" # customizable shell prompt written in Rust
+brew "stormssh" # command line tool to manage your ssh connections
 #brew "terraform"
 brew "the_silver_searcher"
 brew "thefuck"
