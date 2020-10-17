@@ -7,6 +7,9 @@ Plan
  - Great reference for my needs (e.g. installing oh-my-zsh)[zellwk dotfiles](https://github.com/zellwk/dotfiles/blob/master/install.sh)
 
 ## CLI tools
+- Terminal Emulators
+  - Current -> Primary [Alacritty](https://github.com/alacritty/alacritty), secondary [iTerm2](https://www.iterm2.com)
+  - Future -> [extraterm](https://github.com/sedwards2009/extraterm)
 - manage ssh keys with [sshstorm](https://stormssh.readthedocs.io/en/master/)
 - A viewer for git and diff output [delta](https://github.com/dandavison/delta#installation)
 
