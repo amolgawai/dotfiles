@@ -2,6 +2,8 @@
 [include]
         path = ~/.gitconfig.local
 [core]
+  # Use custom `.gitignore` 
+	excludesfile = ~/.gitignore
   pager = delta
 	editor = emacs
 

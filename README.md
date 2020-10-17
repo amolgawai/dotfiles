@@ -14,3 +14,6 @@ Plan
 - A viewer for git and diff output [delta](https://github.com/dandavison/delta#installation)
 
 ## GUI tools
+
+## Utilities
+- Generate gitignore with [gitignore.io](https://www.toptal.com/developers/gitignore)

@@ -355,6 +355,7 @@ function setup_symlinks() {
   symlink "alacritty" ${DOTFILES_ROOT}/alacritty ~/.config/alacritty
   symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
   symlink "gitconfig" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
+  symlink "gitignore" ${DOTFILES_ROOT}/git/gitignore ~/.gitignore
 
 	# Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin
