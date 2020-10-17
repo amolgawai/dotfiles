@@ -354,6 +354,7 @@ function setup_symlinks() {
 	symlink "tmuxinator" ${DOTFILES_ROOT}/tmuxinator ~/.config/tmuxinator
   symlink "alacritty" ${DOTFILES_ROOT}/alacritty ~/.config/alacritty
   symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
+  symlink "gitconfig" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
 
 	# Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin

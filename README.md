@@ -6,5 +6,8 @@ Plan
  - Important reference for a complete dotfile [Mathias Baynes](https://github.com/mathiasbynens/dotfiles)
  - Great reference for my needs (e.g. installing oh-my-zsh)[zellwk dotfiles](https://github.com/zellwk/dotfiles/blob/master/install.sh)
 
-## Details
+## CLI tools
 - manage ssh keys with [sshstorm](https://stormssh.readthedocs.io/en/master/)
+- A viewer for git and diff output [delta](https://github.com/dandavison/delta#installation)
+
+## GUI tools
