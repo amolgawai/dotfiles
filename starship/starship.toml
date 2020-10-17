@@ -5,3 +5,8 @@ add_newline = false
 symbol = "➜"
 error_symbol = "✗"
 use_symbol_for_status = true
+
+[git_status]
+ahead = "⇡${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+behind = "⇣${count}"
