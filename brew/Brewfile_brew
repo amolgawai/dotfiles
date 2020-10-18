@@ -75,6 +75,7 @@ brew "reattach-to-user-namespace" # for tmux commands to work
 brew "ranger"
 brew "redis"
 brew "ripgrep"
+brew "rag" # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
 brew "rustup"
 #brew "ruby" # for Vim command-t plugin to work
 brew "shfmt" # formatter for shell mode
@@ -91,6 +92,7 @@ brew "tre" # modern tree replacement
 brew "tree"
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 brew "vault"
+brew "vifm"
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
 # brew "macvim"

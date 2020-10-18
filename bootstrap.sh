@@ -211,25 +211,25 @@ function setup_emacs_distros() {
 	setup_chemacs
 	setup_emacsadventures
 	setup_doom_emacs
-    setup_elegent_emacs
-    setup_superemacs
-    setup_scimax
+	setup_elegent_emacs
+	setup_superemacs
+	setup_scimax
 	success "emacs distributions are ready"
 }
 
 function setup_scimax() {
-    substep "setting up scimax"
-    REPODEST=${EMACS_DISTROS}/scimax
-    cloneOrUpdate $REPODEST https://github.com/jkitchin/scimax.git
-    symlink "scimax-user" ${DOTFILES_ROOT}/emacs/scimax-user.el $REPODEST/user/user.el
-    success "scimax setup complete"
+	substep "setting up scimax"
+	REPODEST=${EMACS_DISTROS}/scimax
+	cloneOrUpdate $REPODEST https://github.com/jkitchin/scimax.git
+	symlink "scimax-user" ${DOTFILES_ROOT}/emacs/scimax-user.el $REPODEST/user/user.el
+	success "scimax setup complete"
 }
 
 function setup_superemacs() {
-    substep "setting up super emacs"
-    REPODEST=${EMACS_DISTROS}/super-emacs
-    cloneOrUpdate $REPODEST https://github.com/myTerminal/super-emacs.git
-    success "super-emacs setup complete"
+	substep "setting up super emacs"
+	REPODEST=${EMACS_DISTROS}/super-emacs
+	cloneOrUpdate $REPODEST https://github.com/myTerminal/super-emacs.git
+	success "super-emacs setup complete"
 }
 
 function setup_emacsadventures() {
@@ -263,11 +263,11 @@ function setup_doom_emacs() {
 }
 
 function setup_elegent_emacs() {
-    sustep "setting up elegent-emacs"
-    ELEMACS=$(EMACS_DISTROS)/elegantemacs
-    ELEMACSREPO=$(ELEMACS)/elegant-emacs
-    cloneOrUpdate $ELEMACSREPO https://github.com/rougier/elegant-emacs
-    symlink "elegant-emacs init" ${DOTFILES_ROOT}/emacs/elegantemacs/init.el ${ELEMACS}/init.el
+	sustep "setting up elegent-emacs"
+	ELEMACS=$(EMACS_DISTROS)/elegantemacs
+	ELEMACSREPO=$(ELEMACS)/elegant-emacs
+	cloneOrUpdate $ELEMACSREPO https://github.com/rougier/elegant-emacs
+	symlink "elegant-emacs init" ${DOTFILES_ROOT}/emacs/elegantemacs/init.el ${ELEMACS}/init.el
 }
 
 function create_directories() {
@@ -352,10 +352,11 @@ function setup_symlinks() {
 	symlink "aliases" ${DOTFILES_ROOT}/zsh/.zsh_aliases ~/.zsh_aliases
 	symlink "functions" ${DOTFILES_ROOT}/zsh/.functions ~/.functions
 	symlink "tmuxinator" ${DOTFILES_ROOT}/tmuxinator ~/.config/tmuxinator
-  symlink "alacritty" ${DOTFILES_ROOT}/alacritty ~/.config/alacritty
-  symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
-  symlink "gitconfig" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
-  symlink "gitignore" ${DOTFILES_ROOT}/git/gitignore ~/.gitignore
+	symlink "alacritty" ${DOTFILES_ROOT}/alacritty ~/.config/alacritty
+	symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
+	symlink "gitconfig" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
+	symlink "gitignore" ${DOTFILES_ROOT}/git/gitignore ~/.gitignore
+    symlink "vifmrc" ${DOTFILES_ROOT=}/CLI_FileManagers/vifmrc ~/.config/vifm/vifmrc §
 
 	# Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin
@@ -414,7 +415,7 @@ function setup_tmux() {
 	info "Installing Oh My Tmux! from https://github.com/gpakosz/.tmux"
 	cloneOrUpdate ~/.tmux https://github.com/gpakosz/.tmux.git
 	ln -s -f ~/.tmux/.tmux.conf ~/
-    symlink "tmux config" ${DOTFILES_ROOT}/tmux/.tmux.conf.local ~/.tmux.conf.local
+	symlink "tmux config" ${DOTFILES_ROOT}/tmux/.tmux.conf.local ~/.tmux.conf.local
 	# cp ~/.tmux/.tmux.conf.local ~/
 	# substep "Installing tpm"
 	# if test -e ~/.tmux/plugins/tpm; then
