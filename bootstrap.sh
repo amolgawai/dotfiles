@@ -358,6 +358,7 @@ function setup_symlinks() {
 	symlink "gitignore" ${DOTFILES_ROOT}/git/gitignore ~/.gitignore
     symlink "vifmrc" ${DOTFILES_ROOT=}/CLI_FileManagers/vifmrc ~/.config/vifm/vifmrc
     symlink "githound" ${DOTFILES_ROOT}/git/githound.yml ~/.githound.yml
+    symlink "neofetch" ${DOTFILES_ROOT}/neofetch ~/.config/neofetch
 
 	# Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin
