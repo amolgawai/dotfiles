@@ -24,6 +24,9 @@ My dotfiles for primarily setting up a mac
   - primary -> [broot](https://github.com/Canop/broot), [ranger](https://github.com/ranger/ranger)
   - experimental -> [vifm](https://github.com/vifm/vifm)
 - git
+  - [lazygit](https://github.com/jesseduffield/lazygit) -> simple terminal UI for git commands
+  - [tig](https://github.com/jonas/tig) -> text-mode interface for Git
+  - [hound](https://github.com/ezekg/git-hound)Git plugin that helps prevent sensitive data from being committed into a repository by sniffing potential commits against PCRE regular expressions
 
 ## GUI tools
 

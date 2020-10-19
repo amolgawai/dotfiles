@@ -356,7 +356,8 @@ function setup_symlinks() {
 	symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
 	symlink "gitconfig" ${DOTFILES_ROOT}/git/gitconfig ~/.gitconfig
 	symlink "gitignore" ${DOTFILES_ROOT}/git/gitignore ~/.gitignore
-    symlink "vifmrc" ${DOTFILES_ROOT=}/CLI_FileManagers/vifmrc ~/.config/vifm/vifmrc §
+    symlink "vifmrc" ${DOTFILES_ROOT=}/CLI_FileManagers/vifmrc ~/.config/vifm/vifmrc
+    symlink "githound" ${DOTFILES_ROOT}/git/githound.yml ~/.githound.yml
 
 	# Disable shell login message
 	#    symlink "hushlogin" /dev/null ~/.hushlogin
