@@ -59,6 +59,7 @@ brew "mdcat"  # CLI markdown renderer
 #brew "mongodb-community"
 brew "multimarkdown"
 brew "navi"  # fzf powered cheatsheet tool
+brew "neofetch" # CLI sys info (term startup bling)
 #brew "node"
 brew "openssh"
 brew "p7zip"

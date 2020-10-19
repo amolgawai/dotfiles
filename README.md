@@ -23,6 +23,8 @@ My dotfiles for primarily setting up a mac
 - File Managers
   - primary -> [broot](https://github.com/Canop/broot), [ranger](https://github.com/ranger/ranger)
   - experimental -> [vifm](https://github.com/vifm/vifm)
+- System Info
+  - [neofetch](https://github.com/dylanaraps/neofetch) - sysinfo at startup with logo and colors
 - git
   - [lazygit](https://github.com/jesseduffield/lazygit) -> simple terminal UI for git commands
   - [tig](https://github.com/jonas/tig) -> text-mode interface for Git
