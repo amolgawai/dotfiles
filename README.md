@@ -29,6 +29,10 @@ My dotfiles for primarily setting up a mac
   - [lazygit](https://github.com/jesseduffield/lazygit) -> simple terminal UI for git commands
   - [tig](https://github.com/jonas/tig) -> text-mode interface for Git
   - [hound](https://github.com/ezekg/git-hound)Git plugin that helps prevent sensitive data from being committed into a repository by sniffing potential commits against PCRE regular expressions
+- Fun
+  - [fortune](https://en.wikipedia.org/wiki/Fortune_(Unix)) -> random quotes of wisdom
+  - [lolcat](https://github.com/busyloop/lolcat) -> colorize output of any command
+  - [cowsay](https://en.wikipedia.org/wiki/Cowsay) -> draw a character quting something
 
 ## GUI tools
 
