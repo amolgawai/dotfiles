@@ -107,3 +107,8 @@ brew "youtube-dl"
 brew "z"
 brew 'zsh-completions'
 brew "srkomodo/tap/shadowfox-updater"
+
+# fun
+brew "fortune"
+brew "cowsay"
+brew "lolcat"
