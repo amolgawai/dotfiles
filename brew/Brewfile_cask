@@ -1,4 +1,8 @@
+# Terminals
 cask 'alacritty'
+cask 'kitty'
+
+# TODO:- create sections
 cask 'appcleaner'
 cask 'beardedspice'                 # control media including web players
 cask 'clipy'
