@@ -371,6 +371,13 @@ function setup_symlinks() {
 	success "Symlinks successfully setup"
 }
 
+function setup_kitty() {
+    KITTY_CONFIG=~/.config/kitty
+    cloneOrUpdate $(KITTY_CONFIG)/kitty-themes "--depth 1 https://github.com/dexpota/kitty-themes.git "
+    symlink "Kitty Theme" ${KITTY_CONFIG}/kitty-themes/themes/OneDark.conf ${KITTY_CONFIG}/theme.conf
+	symlink "Kitty config" ${DOTFILES_ROOT}/kitty/kitty.config ${KITTY_CONFIG}/kitty.config
+}
+
 # FIXME - add this to other symlinking in above function
 function symlink_clang() {
 	ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
@@ -474,6 +481,7 @@ main() {
 	#   install_pip_packages
 	#    install_yarn_packages
 	setup_symlinks # needed for setup_vim and setup_tmux
+	setup_kitty # kitty terminal
 	setup_vim
 	setup_spacevim
 	setup_tmux
