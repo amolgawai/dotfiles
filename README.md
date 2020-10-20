@@ -16,7 +16,11 @@ My dotfiles for primarily setting up a mac
 ## CLI tools
 
 - Terminal Emulators
-  - Current -> Primary [Alacritty](https://github.com/alacritty/alacritty), secondary [iTerm2](https://www.iterm2.com)
+  - Current
+    - Primary
+      - [Alacritty](https://github.com/alacritty/alacritty),
+      - [kitty](https://github.com/kovidgoyal/kitty)
+    - secondary [iTerm2](https://www.iterm2.com)
   - Future -> [extraterm](https://github.com/sedwards2009/extraterm)
 - manage ssh keys with [sshstorm](https://stormssh.readthedocs.io/en/master/)
 - A viewer for git and diff output [delta](https://github.com/dandavison/delta#installation)
