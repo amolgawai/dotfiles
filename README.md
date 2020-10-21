@@ -7,6 +7,7 @@ My dotfiles for primarily setting up a mac
 - Fast and productive
 - Modern (Use modern replacement of traditional tools)
 - Aesthetic
+- Multiple options
   Plan
 - Primary mechanism adapted from [Holman](https://github.com/holman/dotfiles)
 - Very good reference for actucal shell scripts from [macos empire](https://github.com/sam-hosseini/dotfiles/blob/master/bootstrap.sh)
@@ -18,8 +19,8 @@ My dotfiles for primarily setting up a mac
 - Terminal Emulators
   - Current
     - Primary
-      - [Alacritty](https://github.com/alacritty/alacritty),
       - [kitty](https://github.com/kovidgoyal/kitty)
+      - [Alacritty](https://github.com/alacritty/alacritty),
     - secondary [iTerm2](https://www.iterm2.com)
   - Future -> [extraterm](https://github.com/sedwards2009/extraterm)
 - manage ssh keys with [sshstorm](https://stormssh.readthedocs.io/en/master/)
