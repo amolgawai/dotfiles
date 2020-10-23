@@ -1,9 +1,7 @@
 # dotfiles
-
 My dotfiles for primarily setting up a mac
 
 ## Goals
-
 - Fast and productive
 - Modern (Use modern replacement of traditional tools)
 - Aesthetic
@@ -14,8 +12,10 @@ My dotfiles for primarily setting up a mac
 - Important reference for a complete dotfile [Mathias Baynes](https://github.com/mathiasbynens/dotfiles)
 - Great reference for my needs (e.g. installing oh-my-zsh)[zellwk dotfiles](https://github.com/zellwk/dotfiles/blob/master/install.sh)
 
-## CLI tools
+## Quick Reference
+Go to
 
+## CLI tools
 - Terminal Emulators
   - Current
     - Primary
@@ -42,5 +42,4 @@ My dotfiles for primarily setting up a mac
 ## GUI tools
 
 ## Utilities
-
 - Generate gitignore with [gitignore.io](https://www.toptal.com/developers/gitignore)

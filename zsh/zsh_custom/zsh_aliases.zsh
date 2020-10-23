@@ -180,18 +180,6 @@ if type nvim > /dev/null 2>&1; then
   alias vim='nvim'
 fi
 
-if type fzf > /dev/null 2>&1; then
-  alias vimf='vim $(fzf)'
-  alias catf='cat $(fzf)'
-fi
-
-# markdown viewer glow
-if type glow > /dev/null 2>&1; then
-  alias glow='glow -p'
-  if type fzf > /dev/null 2>&1; then
-    alias glowf='glow $(fzf)'
-  fi
-fi
 
 # tmuxinator
 alias tmxstr="tmuxinator start default"

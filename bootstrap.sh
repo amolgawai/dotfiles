@@ -185,6 +185,7 @@ function install_oh_my_zsh() {
 	if [ ! -e ~/.oh-my-zsh]; then
 		info "Installing oh_my_zsh"
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+        symlink "zsh custom" ${DOTFILES_ROOT}/zsh/zsh_custom ~/.config/zsh_custom
 		success "Oh my zsh installation succeeded"
 	fi
 }
@@ -349,8 +350,8 @@ function setup_symlinks() {
 	# symlink "vim" ${DOTFILES_ROOT}/vim/vimrc ~/.vimrc
 
 	symlink "zsh" ${DOTFILES_ROOT}/zsh/.zshrc ~/.zshrc
-	symlink "aliases" ${DOTFILES_ROOT}/zsh/.zsh_aliases ~/.zsh_aliases
-	symlink "functions" ${DOTFILES_ROOT}/zsh/.functions ~/.functions
+	# symlink "aliases" ${DOTFILES_ROOT}/zsh/.zsh_aliases ~/.zsh_aliases
+	# symlink "functions" ${DOTFILES_ROOT}/zsh/.functions ~/.functions
 	symlink "tmuxinator" ${DOTFILES_ROOT}/tmuxinator ~/.config/tmuxinator
 	symlink "alacritty" ${DOTFILES_ROOT}/alacritty ~/.config/alacritty
 	symlink "starship" ${DOTFILES_ROOT}/starship/starship.toml ~/.config/starship.toml
