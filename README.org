@@ -80,12 +80,22 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
    :PROPERTIES:
    :CUSTOM_ID: gui-tools
    :END:
-
+*** [[https://github.com/Mortennn/Dozer][dozer - hide menu items on macos]]
+*** [[https://github.com/rxhanson/Rectangle][Rectangle]] - window management on macos
+*** [[https://github.com/iglance/iGlance][iGlance]] - macos system monitor
+*** [[https://github.com/yusukeshibata/cpuinfo][cpuinfo]] - cpuinfo menuber app for mac
+*** [[https://github.com/qvacua/vimr][vimr]] - Neovim GUI for macOS
 ** Utilities
    :PROPERTIES:
    :CUSTOM_ID: utilities
    :END:
 - Generate gitignore with [[https://www.toptal.com/developers/gitignore][gitignore.io]]
+** Further exploration
+*** Generic Lists - [[https://github.com/k4m4/terminals-are-sexy][Terminals are sexy]], [[https://github.com/alebcay/awesome-shell][awesome-shell]]
+*** [[https://github.com/garabik/grc][grc - generic coloriser]]
+*** Task Management - [[https://github.com/GothenburgBitFactory/taskwarrior][taskwarrior]], [[https://github.com/smallhadroncollider/taskell][taskell]]
+*** [[https://github.com/lotabout/skim][skim - fzf like fuzzy finder in Rust]]
+*** [[https://github.com/out-of-cheese-error/the-way][the-way, code snippets manager for terminal]]
 ** Resources
 - Primary mechanism adapted from ->  [[https://github.com/holman/dotfiles][Holman]]
 - Very good reference for actucal shell scripts from -> [[https://github.com/sam-hosseini/dotfiles/blob/master/bootstrap.sh][macos  empire]]
