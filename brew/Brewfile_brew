@@ -5,7 +5,6 @@ brew "ack"
 brew "awscli"
 brew "bash-completion"
 brew 'bat' # a featurful cat replacement
-brew "broot" # a powerful directory explorer
 brew "cmake" # for YouCompleteMe vim plugin
 brew "command-tab-plus"
 brew "coreutils" # for awesome commands like timeout
@@ -58,8 +57,6 @@ brew "mas"
 brew "mdcat"  # CLI markdown renderer
 #brew "mongodb-community"
 brew "multimarkdown"
-brew "navi"  # fzf powered cheatsheet tool
-brew "neofetch" # CLI sys info (term startup bling)
 #brew "node"
 brew "openssh"
 brew "p7zip"
@@ -73,9 +70,7 @@ brew "pyenv-virtualwrapper"
 #brew "python3"
 #brew "python@2"
 brew "pandoc"
-brew "poppler"
 brew "reattach-to-user-namespace" # for tmux commands to work
-brew "ranger"
 brew "redis"
 brew "ripgrep"
 brew "rag" # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
@@ -87,15 +82,11 @@ brew "stormssh" # command line tool to manage your ssh connections
 #brew "terraform"
 brew "the_silver_searcher"
 brew "thefuck"
-brew "tldr"
-brew "tmux"
-brew "tmuxinator"
 brew "trash"
 brew "tre" # modern tree replacement
 brew "tree"
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 brew "vault"
-brew "vifm"
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
 # brew "macvim"
@@ -112,3 +103,24 @@ brew "srkomodo/tap/shadowfox-updater"
 brew "fortune"
 brew "cowsay"
 brew "lolcat"
+
+# help and info
+# brew "tldr"
+brew "tealdear" # fast tldr implementation in rust
+brew "navi"  # fzf powered cheatsheet tool
+
+# CLI File Managers
+brew "broot" # a powerful directory explorer
+brew "ranger"
+brew "vifm"
+brew "nnn"
+
+# System info
+brew "neofetch" # CLI sys info (term startup bling)
+brew "dust"
+brew "procs"
+
+# terminal multiplexurs
+brew "tmux"
+brew "tmuxinator"
+brew "tab"

@@ -21,21 +21,25 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
    :PROPERTIES:
    :CUSTOM_ID: cli-tools
    :END:
+- shell and related
+  - zsh
+  - [[https://github.com/ohmyzsh/ohmyzsh][oh-my-zsh]] -> ramework for managing your zsh configuration.
 - Terminal Emulators
-  - Current
-    - Primary
-      - [[https://github.com/kovidgoyal/kitty][kitty]]
-      - [[https://github.com/alacritty/alacritty][Alacritty]]
-    - secondary [[https://www.iterm2.com][iTerm2]]
+  - Primary- [[https://github.com/kovidgoyal/kitty][kitty]],  [[https://github.com/alacritty/alacritty][Alacritty]]
+  - secondary [[https://www.iterm2.com][iTerm2]]
   - Future -> [[https://github.com/sedwards2009/extraterm][extraterm]]
+- Terminal multiplexur
+  - Primary -  [[https://github.com/tmux/tmux][tmux]] with [[https://github.com/tmuxinator/tmuxinator][tmuxinator]] for easily managing sessions
+  - Experimental - [[https://github.com/austinjones/tab-rs][tab]]
 - manage ssh keys with [[https://stormssh.readthedocs.io/en/master/][sshstorm]]
 - A viewer for git and diff output [[https://github.com/dandavison/delta#installation][delta]]
 - File Managers
-  - primary -> [[https://github.com/Canop/broot][broot]],
-    [[https://github.com/ranger/ranger][ranger]]
-  - experimental -> [[https://github.com/vifm/vifm][vifm]]
+  - primary -> [[https://github.com/Canop/broot][broot]], [[https://github.com/ranger/ranger][ranger]]
+  - experimental -> [[https://github.com/vifm/vifm][vifm]], [[https://github.com/jarun/nnn][nnn]]
 - System Info
   - [[https://github.com/dylanaraps/neofetch][neofetch]] - sysinfo at startup with logo and colors
+  - [[https://github.com/htop-dev/htop][htop]] -> cross-platform interactive process viewer.
+  - [[https://github.com/dalance/procs][procs]] -> procs is a replacement for ps written in Rust.
 - git
   - [[https://github.com/jesseduffield/lazygit][lazygit]] -> simple
     terminal UI for git commands
@@ -44,15 +48,34 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
     prevent sensitive data from being committed into a repository by
     sniffing potential commits against PCRE regular expressions
 - Fun
-  - [[https://en.wikipedia.org/wiki/Fortune_(Unix)][fortune]] -> random
-    quotes of wisdom
-  - [[https://github.com/busyloop/lolcat][lolcat]] -> colorize output of
-    any command
-  - [[https://en.wikipedia.org/wiki/Cowsay][cowsay]] -> draw a character
-    quting something
-- Productivity
+  - [[https://en.wikipedia.org/wiki/Fortune_(Unix)][fortune]] -> random quotes of wisdom
+  - [[https://github.com/busyloop/lolcat][lolcat]] -> colorize output of any command
+  - [[https://en.wikipedia.org/wiki/Cowsay][cowsay]] -> draw a character quting something
+- Productivity and Modern tools
   - [[https://github.com/junegunn/fzf][fzf]] The command line fuzzy finder ([[file:cheatsheetNquickrefs/fzf_quickref.md][quickref]])
+  - [[https://the.exa.website][exa]] -> A modern replacement for ls
+  - [[https://github.com/sharkdp/bat][bat]] -> A cat clone with syntax highlighting and Git integration.
+  - [[https://github.com/dduan/tre][tre]] -> A replacement for tree command that uses git ls-files as source of file when possible
+  - [[https://github.com/sharkdp/fd][fd]] -> simple, fast and user-friendly alternative to find.
+  - [[https://github.com/BurntSushi/ripgrep][ripgrep (rg)]] - > tool that recursively searches your current directory for a regex pattern
+  - [[https://github.com/bootandy/dust][dust]] -> du + rust = dust. Like du but more intuitive.
+- Markdown renderer
+  - [[https://github.com/charmbracelet/glow][glow]] -> Render markdown on the CLI, with pizzazz!
+  - [[https://github.com/lunaryorn/mdcat][mdcat]] -> Fancy cat for Markdown
+- Help and info
+  - [[https://github.com/dbrgn/tealdeer][tealdeer]] -> a fast implementation of tldr
+	- [[https://github.com/tldr-pages/tldr][tldr]] -> collaborative cheatsheets for console commands
+  - [[https://github.com/denisidoro/navi][navi]] -> An interactive cheatsheet tool for the command-line and application launchers.
 
+** Editor
+- Emacs
+  - Multiple emacs "distros" managed by [[https://github.com/plexus/chemacs.git][chemacs]]
+  - Primary - [[https://github.com/amolgawai/emacsadventures][emacsadventures]] -> My own emacs configuration
+  - Secondary - [[https://github.com/hlissner/doom-emacs][doom-emacs]], invoked by doomacs
+  - Experimental - [[https://github.com/jkitchin/scimax.git][scimax]] (scimax), [[https://github.com/myTerminal/super-emacs.git][super-emacs (superemacs)]], [[https://github.com/rougier/elegant-emacs][elegant-emacs]] (elegantemacs)
+- Vim
+  - [[https://github.com/neovim/neovim][neovim]], modern vim
+  - Primary - [[https://github.com/SpaceVim/SpaceVim][SpaceVim]]
 ** GUI tools
    :PROPERTIES:
    :CUSTOM_ID: gui-tools
