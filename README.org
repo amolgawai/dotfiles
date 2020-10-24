@@ -4,84 +4,54 @@
   :END:
 
 My dotfiles for primarily setting up a mac
-
 ** Goals
    :PROPERTIES:
    :CUSTOM_ID: goals
    :END:
-
 - Fast and productive
 - Modern (Use modern replacement of traditional tools)
 - Aesthetic
 - Multiple options Plan
-- Primary mechanism adapted from
-  [[https://github.com/holman/dotfiles][Holman]]
-- Very good reference for actucal shell scripts from
-  [[https://github.com/sam-hosseini/dotfiles/blob/master/bootstrap.sh][macos
-  empire]]
-- Important reference for a complete dotfile
-  [[https://github.com/mathiasbynens/dotfiles][Mathias Baynes]]
-- Great reference for my needs (e.g. installing
-  oh-my-zsh)[[https://github.com/zellwk/dotfiles/blob/master/install.sh][zellwk
-  dotfiles]]
-
 ** Quick Reference
    :PROPERTIES:
    :CUSTOM_ID: quick-reference
    :END:
-
 Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
-
 ** CLI tools
    :PROPERTIES:
    :CUSTOM_ID: cli-tools
    :END:
-
 - Terminal Emulators
-
   - Current
-
     - Primary
-
       - [[https://github.com/kovidgoyal/kitty][kitty]]
-      - [[https://github.com/alacritty/alacritty][Alacritty]],
-
+      - [[https://github.com/alacritty/alacritty][Alacritty]]
     - secondary [[https://www.iterm2.com][iTerm2]]
-
   - Future -> [[https://github.com/sedwards2009/extraterm][extraterm]]
-
-- manage ssh keys with
-  [[https://stormssh.readthedocs.io/en/master/][sshstorm]]
-- A viewer for git and diff output
-  [[https://github.com/dandavison/delta#installation][delta]]
+- manage ssh keys with [[https://stormssh.readthedocs.io/en/master/][sshstorm]]
+- A viewer for git and diff output [[https://github.com/dandavison/delta#installation][delta]]
 - File Managers
-
   - primary -> [[https://github.com/Canop/broot][broot]],
     [[https://github.com/ranger/ranger][ranger]]
   - experimental -> [[https://github.com/vifm/vifm][vifm]]
-
 - System Info
-
-  - [[https://github.com/dylanaraps/neofetch][neofetch]] - sysinfo at
-    startup with logo and colors
-
+  - [[https://github.com/dylanaraps/neofetch][neofetch]] - sysinfo at startup with logo and colors
 - git
-
   - [[https://github.com/jesseduffield/lazygit][lazygit]] -> simple
     terminal UI for git commands
   - [[https://github.com/jonas/tig][tig]] -> text-mode interface for Git
   - [[https://github.com/ezekg/git-hound][hound]]Git plugin that helps
     prevent sensitive data from being committed into a repository by
     sniffing potential commits against PCRE regular expressions
-
 - Fun
-
   - [[https://en.wikipedia.org/wiki/Fortune_(Unix)][fortune]] -> random
     quotes of wisdom
   - [[https://github.com/busyloop/lolcat][lolcat]] -> colorize output of
     any command
   - [[https://en.wikipedia.org/wiki/Cowsay][cowsay]] -> draw a character
     quting something
+- Productivity
+  - [[https://github.com/junegunn/fzf][fzf]] The command line fuzzy finder ([[file:cheatsheetNquickrefs/fzf_quickref.md][quickref]])
 
 ** GUI tools
    :PROPERTIES:
@@ -92,6 +62,9 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
    :PROPERTIES:
    :CUSTOM_ID: utilities
    :END:
-
-- Generate gitignore with
-  [[https://www.toptal.com/developers/gitignore][gitignore.io]]
+- Generate gitignore with [[https://www.toptal.com/developers/gitignore][gitignore.io]]
+** Resources
+- Primary mechanism adapted from ->  [[https://github.com/holman/dotfiles][Holman]]
+- Very good reference for actucal shell scripts from -> [[https://github.com/sam-hosseini/dotfiles/blob/master/bootstrap.sh][macos  empire]]
+- Important reference for a complete dotfile ->  [[https://github.com/mathiasbynens/dotfiles][Mathias Baynes]]
+- Great reference for my needs (e.g. installing oh-my-zsh) -> [[https://github.com/zellwk/dotfiles/blob/master/install.sh][zellwk  dotfiles]]
