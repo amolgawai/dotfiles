@@ -185,7 +185,9 @@ function install_oh_my_zsh() {
 	if [ ! -e ~/.oh-my-zsh]; then
 		info "Installing oh_my_zsh"
 		sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-        symlink "zsh custom" ${DOTFILES_ROOT}/zsh/zsh_custom ~/.config/zsh_custom
+        symlink "zsh aliases" ${DOTFILES_ROOT}/zsh/zsh_custom/zsh_aliases.zsh ~/.oh-my-zsh/custom/zsh_aliases.zsh
+        symlink "fzf aliases"${DOTFILES_ROOT}/zsh/zsh_custom/fzf_aliases.zsh ~/.oh-my-zsh/custom/fzf_aliases.zsh
+        symlink "functions"${DOTFILES_ROOT}/zsh/zsh_custom/functions.zsh ~/.oh-my-zsh/custom/functions.zsh
 		success "Oh my zsh installation succeeded"
 	fi
 }
