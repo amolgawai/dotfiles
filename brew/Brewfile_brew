@@ -21,18 +21,8 @@ brew "fzf"
 brew "fzy"
 # brew "gifsicle" # for gif_compress fish function
 brew "glances" # cli system monitor
-brew "gh"      # github CLI
 brew "glow"    # markdown CLI renderer
 brew "ghostscript"
-brew "git"
-brew "git-extras"
-brew "git-lfs"
-brew "git-open"
-brew "git-plus"
-brew "gitbatch"
-brew "gitgui"
-brew "git-hound" # git plugin that helps prevent sensitive data from being committed into a repo
-brew "tig" # ncurses-based text-mode interface for git
 brew 'gnuplot'
 brew "gnu-tar"
 brew "go"
@@ -48,7 +38,6 @@ brew "httpie"
 brew "hunspell"
 brew "imagemagick"
 brew "jq"
-brew "lazygit"
 brew "lf"    # console file manager written in go
 brew "llvm"
 brew "lynx"                     # CLI browser
@@ -124,3 +113,17 @@ brew "procs"
 brew "tmux"
 brew "tmuxinator"
 brew "tab"
+
+# git and related
+brew "git"
+brew "git-extras"
+brew "git-lfs"
+brew "git-open"
+brew "git-plus"
+brew "gitbatch"
+brew "gitgui"
+brew "git-hound" # git plugin that helps prevent sensitive data from being committed into a repo
+brew "tig" # ncurses-based text-mode interface for git
+brew "gh"      # github CLI
+brew "lazygit"
+brew "onefetch" # git repo info similar to neofetch
