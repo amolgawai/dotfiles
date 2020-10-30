@@ -1,6 +1,7 @@
 # Terminals
 cask 'alacritty'
 cask 'kitty'
+cask 'edex-ui' # fun bling terminal
 
 # TODO:- create sections
 cask 'appcleaner'
