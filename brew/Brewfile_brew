@@ -97,6 +97,7 @@ brew "lolcat"
 # brew "tldr"
 brew "tealdear" # fast tldr implementation in rust
 brew "navi"  # fzf powered cheatsheet tool
+brew "cheat" # CLI cheatsheets
 
 # CLI File Managers
 brew "broot" # a powerful directory explorer

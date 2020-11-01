@@ -12,3 +12,16 @@
    lS='exa -1'                                                              # one column, just names
    lt='exa --tree --level=2'                                         # tree
 ```
+## Kitty shortcuts
+### Tabs
+New tab      -> ctrl+shift+t (also ⌘+t on macOS)
+Close tab    -> ctrl+shift+q (also ⌘+w on macOS)
+Next tab     -> ctrl+shift+right (also ^+⇥ and ⇧+⌘+] on macOS)
+Previous tab -> ctrl+shift+left (also ⇧+^+⇥ and ⇧+⌘+[ on macOS)
+### Windows
+New window -> ctrl+shift+enter (also ⌘+↩ on macOS)
+New OS window -> ctrl+shift+n (also ⌘+n on macOS)
+Close window -> ctrl+shift+w (also ⇧+⌘+d on macOS)
+Next window -> ctrl+shift+]
+Previous window -> ctrl+shift+[
+switch between layouts using the ctrl+shift+l
