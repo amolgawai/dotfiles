@@ -34,3 +34,13 @@ To format a line to the left
 Use this format an entire file:
 
     :%le
+
+## move lines
+
+    :m 12	move current line to after line 12
+    :m 0	move current line to before first line
+    :m $	move current line to after last line
+    :m -5   move current line to after 5th line above
+    :m +5   Same as above but 5th line below
+    :5,7m 21	move lines 5, 6 and 7 to after line 21
+    :5,7m 0	move lines 5, 6 and 7 to before first line

@@ -1,92 +1,36 @@
-brew "ag"
-brew "automake"
+# -*- mode: sh -*-
+
+# shell
 brew "autojump"
-brew "ack"
-brew "awscli"
 brew "bash-completion"
-brew 'bat' # a featurful cat replacement
-brew "cmake" # for YouCompleteMe vim plugin
-brew "command-tab-plus"
-brew "coreutils" # for awesome commands like timeout
-brew "ctags"
-brew "diff-so-fancy"
-brew "libvpx"
-brew "exa"   # fast ls replacement written in Rust
-brew "fd"
-brew "ffmpeg" # for being able to manipulate videos for example
-brew "findutils"
-# brew "fish"
-# brew "flake8" # for linting Python files
-brew "fzf"
-brew "fzy"
-# brew "gifsicle" # for gif_compress fish function
-brew "glances" # cli system monitor
-brew "glow"    # markdown CLI renderer
-brew "ghostscript"
-brew 'gnuplot'
-brew "gnu-tar"
-brew "go"
-brew "googler"                  # CLI google search tool
-brew "graphicsmagick"
-brew "grep"
-brew "gs"
-brew "pkg-config"
-brew "hub"
-brew "htop"
-brew "hunspell"
-brew "httpie"
-brew "hunspell"
-brew "imagemagick"
-brew "jq"
-brew "lf"    # console file manager written in go
-brew "llvm"
-brew "lynx"                     # CLI browser
-brew "clang-format"
-brew "mas"
-brew "mdcat"  # CLI markdown renderer
-#brew "mongodb-community"
-brew "multimarkdown"
-#brew "node"
-brew "openssh"
-brew "p7zip"
-brew "parallel"
-brew "poppler" # to work with pdf files and merge/extract them for example
-brew "postgresql"
-brew "prettier"
-brew "pyenv"
-brew "pyenv-virtualenv"
-brew "pyenv-virtualwrapper"
-#brew "python3"
-#brew "python@2"
-brew "pandoc"
-brew "reattach-to-user-namespace" # for tmux commands to work
-brew "redis"
-brew "ripgrep"
-brew "rag" # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
-brew "rustup"
-#brew "ruby" # for Vim command-t plugin to work
-brew "shfmt" # formatter for shell mode
 brew "starship" # customizable shell prompt written in Rust
-brew "stormssh" # command line tool to manage your ssh connections
-#brew "terraform"
-brew "the_silver_searcher"
+brew "z"
+brew 'zsh-completions'
+brew "coreutils" # for awesome commands like timeout
 brew "thefuck"
 brew "trash"
+brew "parallel"
+
+# modern CLI tools
+brew "ag"
+brew "ack"
+brew 'bat' # a featurful cat replacement
+brew "exa"   # fast ls replacement written in Rust
+brew "fd"
+brew "findutils"
+brew "fzf"
+brew "ripgrep"
+brew "rag" # ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.
+brew "fzy"
+brew "the_silver_searcher"
 brew "tre" # modern tree replacement
-brew "tree"
-brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
-brew "vault"
+brew "grep"
+
+# CLI editors
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
 # brew "macvim"
 brew "neovim"
-brew "wget"
-brew "wifi-password"
-#brew "yarn"
-brew "youtube-dl"
-brew "z"
-brew 'zsh-completions'
-brew "srkomodo/tap/shadowfox-updater"
 
 # fun
 brew "fortune"
@@ -98,9 +42,11 @@ brew "lolcat"
 brew "tealdear" # fast tldr implementation in rust
 brew "navi"  # fzf powered cheatsheet tool
 brew "cheat" # CLI cheatsheets
+brew "googler"                  # CLI google search tool
 
 # CLI File Managers
 brew "broot" # a powerful directory explorer
+brew "lf"    # console file manager written in go
 brew "ranger"
 brew "vifm"
 brew "nnn"
@@ -109,6 +55,8 @@ brew "nnn"
 brew "neofetch" # CLI sys info (term startup bling)
 brew "dust"
 brew "procs"
+brew "htop"
+brew "glances" # cli system monitor
 
 # terminal multiplexurs
 brew "tmux"
@@ -124,7 +72,73 @@ brew "git-plus"
 brew "gitbatch"
 brew "gitgui"
 brew "git-hound" # git plugin that helps prevent sensitive data from being committed into a repo
+brew "hub"
 brew "tig" # ncurses-based text-mode interface for git
 brew "gh"      # github CLI
 brew "lazygit"
 brew "onefetch" # git repo info similar to neofetch
+
+# markdown, pdf etc.
+brew "ghostscript"
+brew "gs"
+brew "mdcat"  # CLI markdown renderer
+brew "multimarkdown"
+brew "poppler" # to work with pdf files and merge/extract them for example
+brew "pandoc"
+brew "glow"    # markdown CLI renderer
+
+# macos
+brew "command-tab-plus"
+brew "reattach-to-user-namespace" # for tmux commands to work
+brew "mas"
+
+# media - audio, video, images
+brew "libvpx"
+brew "ffmpeg" # for being able to manipulate videos for example
+brew "graphicsmagick"
+brew "imagemagick"
+brew "youtube-dl"
+
+# ssh
+brew "openssh"
+brew "stormssh" # command line tool to manage your ssh connections
+brew "stormssh-completion"
+
+# coding
+brew "automake"
+brew "awscli"
+brew "cmake" # for YouCompleteMe vim plugin
+brew "ctags"
+brew "diff-so-fancy"
+brew 'gnuplot'
+brew "go"
+brew "rustup"
+brew "pkg-config"
+brew "llvm"
+brew "clang-format"
+brew "postgresql"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualwrapper"
+brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
+#brew "terraform"
+brew "jq"
+#brew "mongodb-community"
+#brew "node"
+brew "vault"
+#brew "yarn"
+
+# archive
+brew "gnu-tar"
+brew "p7zip"
+
+# web, browser
+brew "httpie"
+brew "lynx"                     # CLI browser
+brew "wget"
+brew "srkomodo/tap/shadowfox-updater" # cross platform dark mode for firefox
+
+# formatters, beautifiers, speel checkers
+brew "prettier"
+brew "shfmt" # formatter for shell mode
+brew "hunspell"
