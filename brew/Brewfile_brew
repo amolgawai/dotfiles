@@ -1,6 +1,6 @@
 # -*- mode: sh -*-
 
-# shell
+## shell ##
 brew "autojump"
 brew "bash-completion"
 brew "starship" # customizable shell prompt written in Rust
@@ -11,7 +11,7 @@ brew "thefuck"
 brew "trash"
 brew "parallel"
 
-# modern CLI tools
+## modern CLI tools ##
 brew "ag"
 brew "ack"
 brew 'bat' # a featurful cat replacement
@@ -26,44 +26,44 @@ brew "the_silver_searcher"
 brew "tre" # modern tree replacement
 brew "grep"
 
-# CLI editors
+## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
 # brew "macvim"
 brew "neovim"
 
-# fun
+## fun ##
 brew "fortune"
 brew "cowsay"
 brew "lolcat"
 
-# help and info
+## help and info ##
 # brew "tldr"
 brew "tealdear" # fast tldr implementation in rust
 brew "navi"  # fzf powered cheatsheet tool
 brew "cheat" # CLI cheatsheets
 brew "googler"                  # CLI google search tool
 
-# CLI File Managers
+## CLI File Managers ##
 brew "broot" # a powerful directory explorer
 brew "lf"    # console file manager written in go
 brew "ranger"
 brew "vifm"
 brew "nnn"
 
-# System info
+## System info ##
 brew "neofetch" # CLI sys info (term startup bling)
 brew "dust"
 brew "procs"
 brew "htop"
 brew "glances" # cli system monitor
 
-# terminal multiplexurs
+## terminal multiplexurs ##
 brew "tmux"
 brew "tmuxinator"
 brew "tab"
 
-# git and related
+## git and related ##
 brew "git"
 brew "git-extras"
 brew "git-lfs"
@@ -78,7 +78,7 @@ brew "gh"      # github CLI
 brew "lazygit"
 brew "onefetch" # git repo info similar to neofetch
 
-# markdown, pdf etc.
+## markdown, pdf etc. ##
 brew "ghostscript"
 brew "gs"
 brew "mdcat"  # CLI markdown renderer
@@ -87,24 +87,24 @@ brew "poppler" # to work with pdf files and merge/extract them for example
 brew "pandoc"
 brew "glow"    # markdown CLI renderer
 
-# macos
+## macos ##
 brew "command-tab-plus"
 brew "reattach-to-user-namespace" # for tmux commands to work
 brew "mas"
 
-# media - audio, video, images
+## media - audio, video, images ##
 brew "libvpx"
 brew "ffmpeg" # for being able to manipulate videos for example
 brew "graphicsmagick"
 brew "imagemagick"
 brew "youtube-dl"
 
-# ssh
+## ssh ##
 brew "openssh"
 brew "stormssh" # command line tool to manage your ssh connections
 brew "stormssh-completion"
 
-# coding
+## coding ##
 brew "automake"
 brew "awscli"
 brew "cmake" # for YouCompleteMe vim plugin
@@ -128,17 +128,17 @@ brew "jq"
 brew "vault"
 #brew "yarn"
 
-# archive
+## archive ##
 brew "gnu-tar"
 brew "p7zip"
 
-# web, browser
+## web, browser ##
 brew "httpie"
 brew "lynx"                     # CLI browser
 brew "wget"
 brew "srkomodo/tap/shadowfox-updater" # cross platform dark mode for firefox
 
-# formatters, beautifiers, speel checkers
+## formatters, beautifiers, speel checkers ##
 brew "prettier"
 brew "shfmt" # formatter for shell mode
 brew "hunspell"

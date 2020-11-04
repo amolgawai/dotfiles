@@ -1,48 +1,65 @@
 # -*- mode: sh -*-
 
-# Terminals
+## Terminals ##
 cask 'alacritty'
 cask 'kitty'
 cask 'edex-ui' # fun bling terminal
+cask "iterm2"
+
+## media - audio, video, images ##
+cask "inkscape"
+cask "yt-music"
+cask 'beardedspice'                 # control media including web players
+cask "gimp"
+cask 'vlc'
+#cask "spotify"
+
+## system info ##
+cask 'cpuinfo'
+cask 'iglance'
+cask "oni"
+cask "onyx"
+
+## productivity ##
+cask 'clipy'
+cask "alfred"
+cask 'cheatsheet'
+cask "kap"                          # open source screen recorder
+cask "karabiner-elements"
+cask "insomnia"
+#cask "bartender"
+
+
+## editors (text, markdown) ##
+cask "emacs"
+cask "mark-text"
+cask "mactex"
+cask "sublime-text"
+cask "vimr"
+cask "typora"
+
+## coding ##
+cask "dash"
+cask "fork"                         # free macos git frontend
 
 # TODO:- create sections
 cask 'appcleaner'
-cask 'beardedspice'                 # control media including web players
-cask 'clipy'
-cask "emacs"
-cask "inkscape"
-cask "mark-text"
-cask "yt-music"
 #cask "1password"
 #cask "1password-cli"
-cask "alfred"
 # cask "avast-security"
-#cask "bartender"
-cask 'cheatsheet'
-cask 'cpuinfo'
 #cask "cyberduck"
-cask "dash"
 cask "docker"
 cask "dozer"                        # hide statusbar icons, bartender alternative
 cask "dropbox"
 #cask "fantastical"
 #cask "firefox"
-cask "font-fira-mono-for-powerline" # for iTerm2 powerline
-cask "fork"                         # free macos git frontend
 cask "foxitreader"
-cask "gimp"
 #cask "google-chrome"
 #cask "google-cloud-sdk"
 #cask "hammerspoon"
-cask 'iglance'
 #cask "iina"
-cask "insomnia"
-cask "iterm2"
 cask "itsycal"
-cask "kap"                          # open source screen recorder
-cask "karabiner-elements"
 #cask "libreoffice"
-cask "mactex"
 #cask "ngrok"
 #cask "nordvpn"
 #cask "numi"
@@ -51,22 +68,14 @@ cask "mactex"
 cask "rectangle"
 #cask "slack"
 cask "spectacle"                    # open source window manager
-#cask "spotify"
-cask "sublime-text"
 #cask "teamviewer"
 cask "the-unarchiver"
 cask "transmission"
 cask "tunnelblick"
-cask "typora"
-cask 'vlc'
 #cask "zoomus"
 # vim guis for mac
-cask "vimr"
-cask "oni"
-# system tools for macos
-cask "onyx"
 
-# quicklook plugins
+## quicklook plugins ##
 cask "qlcolorcode"
 cask "qlmarkdown"
 cask "webpquicklook"
@@ -84,7 +93,7 @@ cask 'quicklookapk'
 cask 'quicklook-pat'
 cask 'jupyter-notebook-ql'
 
-#fonts
+##fonts ##
 cask "font-arial"
 cask "font-arial-black"
 cask "font-microsoft-office"
