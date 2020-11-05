@@ -7,5 +7,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
 #tap "mongodb/brew"
+tap 'universal-ctags/universal-ctags'
 tap "srkomodo/tap"
 tap "austinjones/taps/tab"

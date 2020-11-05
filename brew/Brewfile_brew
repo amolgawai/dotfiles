@@ -108,7 +108,8 @@ brew "stormssh-completion"
 brew "automake"
 brew "awscli"
 brew "cmake" # for YouCompleteMe vim plugin
-brew "ctags"
+# brew "ctags"
+brew "universal-ctags/universal-ctags/universal-ctags", args: ['HEAD']
 brew "diff-so-fancy"
 brew 'gnuplot'
 brew "go"
