@@ -57,6 +57,7 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - [[https://en.wikipedia.org/wiki/Fortune_(Unix)][fortune]] -> random quotes of wisdom
   - [[https://github.com/busyloop/lolcat][lolcat]] -> colorize output of any command
   - [[https://en.wikipedia.org/wiki/Cowsay][cowsay]] -> draw a character quting something
+  - [[https://github.com/svenstaro/genact][genact]] -> a nonsense activity generator
 - Productivity and Modern tools
   - [[https://github.com/junegunn/fzf][fzf]] The command line fuzzy finder ([[file:cheatsheetNquickrefs/fzf_quickref.md][quickref]])
   - [[https://the.exa.website][exa]] -> A modern replacement for ls

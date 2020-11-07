@@ -36,6 +36,7 @@ brew "neovim"
 brew "fortune"
 brew "cowsay"
 brew "lolcat"
+brew "genact" # a random nonsense generator
 
 ## help and info ##
 # brew "tldr"
