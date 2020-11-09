@@ -159,7 +159,7 @@ unalias grv
 export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # fzf default command
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+export FZF_DEFAULT_COMMAND='rg --hidden --ignore .git -g ""'
 # fzf theme - one dark - https://github.com/junegunn/fzf/wiki/Color-schemes
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=dark
