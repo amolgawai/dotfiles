@@ -41,6 +41,7 @@ cask "typora"
 ## coding ##
 cask "dash"
 cask "fork"                         # free macos git frontend
+cask "sourcetrail"
 
 # TODO:- create sections
 cask 'appcleaner'
