@@ -171,3 +171,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 ulimit -S -n 2048
 
 neofetch
+
+# Created by `userpath` on 2021-01-17 20:45:55
+export PATH="$PATH:/Users/amolgawai/.local/bin"

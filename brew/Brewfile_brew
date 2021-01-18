@@ -123,6 +123,7 @@ brew "postgresql"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "pyenv-virtualwrapper"
+brew "pipx"   # Install common packages globally without polluting virtualenvs
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 #brew "terraform"
 brew "jq"
