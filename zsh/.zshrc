@@ -170,7 +170,12 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # increase open file limits to avoid problems on macos
 ulimit -S -n 2048
 
-neofetch
+# auto completions for pipx
+autoload -U bashcompinit
+bashcompinit
+eval "$(register-python-argcomplete pipx)"
 
 # Created by `userpath` on 2021-01-17 20:45:55
 export PATH="$PATH:/Users/amolgawai/.local/bin"
+
+neofetch
