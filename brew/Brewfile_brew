@@ -73,6 +73,7 @@ brew "git-plus"
 brew "gitbatch"
 brew "gitgui"
 brew "git-hound" # git plugin that helps prevent sensitive data from being committed into a repo
+brew "gitleaks"
 brew "hub"
 brew "tig" # ncurses-based text-mode interface for git
 brew "gh"      # github CLI

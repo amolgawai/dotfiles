@@ -176,6 +176,9 @@ bashcompinit
 eval "$(register-python-argcomplete pipx)"
 
 # Created by `userpath` on 2021-01-17 20:45:55
-export PATH="$PATH:/Users/amolgawai/.local/bin"
+export PATH="$PATH:~/.local/bin"
+
+# since ruby and gems are installed for user, add path
+export PATH="~/.gem:$PATH"
 
 neofetch
