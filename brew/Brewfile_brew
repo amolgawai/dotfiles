@@ -25,6 +25,7 @@ brew "fzy"
 brew "the_silver_searcher"
 brew "tre" # modern tree replacement
 brew "grep"
+brew "xplr" # cli file manager written in rust
 
 ## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]
