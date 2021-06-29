@@ -90,6 +90,7 @@ brew "multimarkdown"
 brew "poppler" # to work with pdf files and merge/extract them for example
 brew "pandoc"
 brew "glow"    # markdown CLI renderer
+brew "slides"  # markdown presentations in terminal
 
 ## macos ##
 brew "command-tab-plus"
