@@ -10,6 +10,7 @@ brew "coreutils" # for awesome commands like timeout
 brew "thefuck"
 brew "trash"
 brew "parallel"
+brew "topgrade" # All-in-one upgrade tool
 
 ## modern CLI tools ##
 brew "ag"

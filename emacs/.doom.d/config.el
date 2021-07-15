@@ -40,10 +40,10 @@
 
   (setq deft-directory "~/MyOrganiser/")
 
-  (after! centaur-tabs
-    :bind
-    ("C-<prior>" . centaur-tabs-backward)
-    ("C-<next>" . centaur-tabs-forward))
+  ;; (after! centaur-tabs
+  ;;   :bind
+  ;;   ("C-<prior>" . centaur-tabs-backward)
+   ;;  ("C-<next>" . centaur-tabs-forward))
   ;; function list sidebar
   (use-package! imenu-list
     :bind ([f9] . imenu-list-smart-toggle)
