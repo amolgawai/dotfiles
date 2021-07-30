@@ -61,6 +61,12 @@
     ;; (org-journal-enable-encryption nil)
     (org-journal-enable-agenda-integration t))
 
+;; yasnippet
+(setq yas-triggers-in-field t)
+(use-package! doom-snippets             ; hlissner
+  :after yasnippet)
+(use-package! yasnippet-snippets        ; AndreaCrotti
+  :after yasnippet)
 
   ;; Here are some additional functions/macros that could help you configure Doom:
   ;;

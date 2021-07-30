@@ -16,7 +16,7 @@ brew "topgrade" # All-in-one upgrade tool
 brew "ag"
 brew "ack"
 brew 'bat' # a featurful cat replacement
-brew "exa"   # fast ls replacement written in Rust
+brew "exa" # fast ls replacement written in Rust
 brew "fd"
 brew "findutils"
 brew "fzf"
@@ -44,9 +44,9 @@ brew "genact" # a random nonsense generator
 ## help and info ##
 # brew "tldr"
 brew "tealdear" # fast tldr implementation in rust
-brew "navi"  # fzf powered cheatsheet tool
-brew "cheat" # CLI cheatsheets
-brew "googler"                  # CLI google search tool
+brew "navi"     # fzf powered cheatsheet tool
+brew "cheat"    # CLI cheatsheets
+brew "googler"  # CLI google search tool
 
 ## CLI File Managers ##
 brew "broot" # a powerful directory explorer
@@ -79,19 +79,19 @@ brew "git-hound" # git plugin that helps prevent sensitive data from being commi
 brew "gitleaks"
 brew "hub"
 brew "tig" # ncurses-based text-mode interface for git
-brew "gh"      # github CLI
+brew "gh"  # github CLI
 brew "lazygit"
 brew "onefetch" # git repo info similar to neofetch
 
 ## markdown, pdf etc. ##
 brew "ghostscript"
 brew "gs"
-brew "mdcat"  # CLI markdown renderer
+brew "mdcat" # CLI markdown renderer
 brew "multimarkdown"
 brew "poppler" # to work with pdf files and merge/extract them for example
 brew "pandoc"
-brew "glow"    # markdown CLI renderer
-brew "slides"  # markdown presentations in terminal
+brew "glow"   # markdown CLI renderer
+brew "slides" # markdown presentations in terminal
 
 ## macos ##
 brew "command-tab-plus"
@@ -104,6 +104,7 @@ brew "ffmpeg" # for being able to manipulate videos for example
 brew "graphicsmagick"
 brew "imagemagick"
 brew "youtube-dl"
+brew "pngpaste"
 
 ## ssh ##
 brew "openssh"
@@ -124,11 +125,12 @@ brew "rustup"
 brew "pkg-config"
 brew "llvm"
 brew "clang-format"
+brew "plantuml"
 brew "postgresql"
 brew "pyenv"
 brew "pyenv-virtualenv"
 brew "pyenv-virtualwrapper"
-brew "pipx"   # Install common packages globally without polluting virtualenvs
+brew "pipx"       # Install common packages globally without polluting virtualenvs
 brew "twine-pypi" # for packaging Pypi packages, needed by setup.py repo
 #brew "terraform"
 brew "jq"
@@ -143,7 +145,7 @@ brew "p7zip"
 
 ## web, browser ##
 brew "httpie"
-brew "lynx"                     # CLI browser
+brew "lynx" # CLI browser
 brew "wget"
 brew "srkomodo/tap/shadowfox-updater" # cross platform dark mode for firefox
 
