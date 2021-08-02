@@ -469,6 +469,20 @@ function setup_hunspell() {
 	success "hunspell setup complete"
 }
 
+function setup_rust() {
+    # setup rust development environment
+	info "setting up rust development environment"
+	substep "installing rustup"
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    rustup update
+	substep "adding components to rustup"
+    rustup component add rls rust-analysis rust-src rust-doc
+    rustup component add rustfmt-preview clippy-preview
+	substep "installing cargo tools"
+    cargo install clippy rustfmt racer cargo-edit cargo-generate
+	success "rust setup complete"
+}
+
 main() {
 	ask_for_sudo
 	install_xcode_command_line_tools # to get "git", needed for clone_dotfiles_repo
@@ -492,6 +506,7 @@ main() {
 	#    update_hosts_file
 	#    setup_macOS_defaults
 	#    update_login_items
+	setup_rust
 	success "Setup complete - Enjoy"
 }
 
