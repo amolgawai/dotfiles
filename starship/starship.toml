@@ -10,3 +10,6 @@ use_symbol_for_status = true
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 behind = "⇣${count}"
+
+[conda]
+format = "[$symbol$environment](dimmed green) "

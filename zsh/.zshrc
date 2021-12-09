@@ -147,13 +147,16 @@ export PYENV_ROOT="${HOME}/.pyenv"
 
 if [ -d "${PYENV_ROOT}" ]; then
     export PATH="${PYENV_ROOT}/bin:${PATH}"
-    eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
 fi
 eval "$(pyenv virtualenv-init -)"
 
 # poetry initialization
 source $HOME/.poetry/env
 unalias grv
+
+# conda initialization
+eval "$(/Users/amolgawai/miniforge3/bin/conda shell.zsh hook)"
 
 # clangd path
 export PATH="/usr/local/opt/llvm/bin:$PATH"
