@@ -1,6 +1,7 @@
 # -*- mode: sh -*-
 
 ## Terminals ##
+cask 'tabby'
 cask 'alacritty'
 cask 'kitty'
 cask 'edex-ui' # fun bling terminal

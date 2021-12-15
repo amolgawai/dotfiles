@@ -72,7 +72,7 @@ plugins=(
     git-extras
     brew
     npm
-    osx
+    macos
     python
     poetry
     iterm2
