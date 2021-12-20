@@ -114,6 +114,8 @@ brew "stormssh-completion"
 ## coding ##
 brew "automake"
 brew "awscli"
+brew "bear" # compilation database generator for clang tooling
+brew "bazelisk" # A user-friendly launcher for Bazel
 brew "cmake" # for YouCompleteMe vim plugin
 brew "cookiecutter"
 # brew "ctags"
