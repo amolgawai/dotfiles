@@ -83,7 +83,9 @@ brew "gh"  # github CLI
 brew "lazygit"
 brew "onefetch" # git repo info similar to neofetch
 
-## markdown, pdf etc. ##
+## markdown, pdf, documentation, graphs etc. ##
+brew "doxygen"
+brew "graphviz"
 brew "ghostscript"
 brew "gs"
 brew "mdcat" # CLI markdown renderer
@@ -128,6 +130,7 @@ brew "rustup"
 brew "pkg-config"
 brew "llvm"
 brew "clang-format"
+brew "cppcheck"
 brew "octave"
 brew "plantuml"
 brew "postgresql"
