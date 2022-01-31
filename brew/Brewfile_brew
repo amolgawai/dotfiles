@@ -119,7 +119,8 @@ brew "awscli"
 brew "bear" # compilation database generator for clang tooling
 brew "bazelisk" # A user-friendly launcher for Bazel
 brew "buildifier" # formatter for bazel build files
-brew "cmake" # for YouCompleteMe vim plugin
+brew "ccache" # The compiler cache tool
+brew "cmake" # The build engine for c, c++
 brew "cookiecutter"
 # brew "ctags"
 brew "universal-ctags/universal-ctags/universal-ctags", args: ['HEAD']
