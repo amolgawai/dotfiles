@@ -32,13 +32,13 @@
 
   ;; If you use `org' and don't want your org files in the default location below,
   ;; change `org-directory'. It must be set before org loads!
-  (setq org-directory "~/MyOrganiser/")
+  (setq org-directory "~/Notes/")
 
   ;; This determines the style of line numbers in effect. If set to `nil', line
   ;; numbers are disabled. For relative line numbers, set this to `relative'.
   (setq display-line-numbers-type 'visual)
 
-  (setq deft-directory "~/MyOrganiser/")
+  (setq deft-directory "~/Notes/")
 
   ;; (after! centaur-tabs
   ;;   :bind
@@ -67,6 +67,21 @@
   :after yasnippet)
 (use-package! yasnippet-snippets        ; AndreaCrotti
   :after yasnippet)
+
+;; blamer.el
+;; (use-package! blamer
+;;   :bind (("s-i" . blamer-show-commit-info))
+;;   :defer 20
+;;   :custom
+;;   (blamer-idle-time 0.3)
+;;   (blamer-min-offset 70)
+;;   :custom-face
+;;   (blamer-face ((t :foreground "#7a88cf"
+;;                     :background nil
+;;                     :height 140
+;;                     :italic t)))
+;;   :config
+  ;; (global-blamer-mode 1))
 
   ;; Here are some additional functions/macros that could help you configure Doom:
   ;;

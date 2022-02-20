@@ -25,6 +25,8 @@
        ;;helm              ; the *other* search engine for love and life
        ;;ido               ; the other *other* search engine...
        (ivy                ; a search engine for love and life
+        +fuzzy
+        +prescient
         +icons
         +childframe)
 
@@ -36,9 +38,9 @@
        fill-column       ; a `fill-column' indicator
        hl-todo           ; highlight TODO/FIXME/NOTE/DEPRECATED/HACK/REVIEW
        ;;hydra
-       (emoji +unicode)
+       (emoji +ascii +github +unicode)
        indent-guides     ; highlighted indent columns
-       ligatures
+       (ligatures +extra +fira +hasklig +iosevka +pragmata-pro)
        minimap
        modeline          ; snazzy, Atom-inspired modeline, plus API
        nav-flash         ; blink the current line after jumping
@@ -49,13 +51,15 @@
         +defaults)       ; default popup rules
        pretty-code       ; replace bits of code with pretty symbols
        tabs              ; an tab bar for Emacs
-       treemacs          ; a project drawer, like neotree but cooler
+       (treemacs          ; a project drawer, like neotree but cooler
+        +lsp)
        unicode           ; extended unicode support for various languages
        vc-gutter         ; vcs diff in the fringe
        vi-tilde-fringe   ; fringe tildes to mark beyond EOB
-       window-select     ; visually switch windows
+       (window-select     ; visually switch windows
+        +switch-window +numbers)
        workspaces        ; tab emulation, persistence & separate workspaces
-       ;;zen               ; distraction-free coding or writing
+       zen               ; distraction-free coding or writing
 
        :editor
        (evil +everywhere); come to the dark side, we have cookies
@@ -72,10 +76,12 @@
        ;;word-wrap         ; soft wrapping with language-aware indent
 
        :emacs
-       dired             ; making dired pretty [functional]
+       (dired             ; making dired pretty [functional]
+        +ranger +icons)
        electric          ; smarter, keyword-based electric-indent
-       ibuffer           ; interactive buffer management
-       undo
+       (ibuffer           ; interactive buffer management
+        +icons)
+       (undo +tree)
        vc                ; version-control and Emacs, sitting in a tree
 
        :term
@@ -85,22 +91,24 @@
        vterm             ; another terminals in Emacs
 
        :checkers
-       syntax            ; tasing you for every semicolon you forget
-       (spell +flyspell) ; tasing you for misspelling mispelling
+       (syntax           ; tasing you for every semicolon you forget
+        +childframe)
+       (spell            ; tasing you for misspelling mispelling
+        +aspell +flyspell +enchant +everywhere +hunspell)
        grammar           ; tasing grammar mistake every you make
 
        :tools
        ;;ansible
        debugger          ; FIXME stepping through code, to help you add bugs
        ;;direnv
-       docker
+       (docker +lsp)
        ;;editorconfig      ; let someone else argue about tabs vs spaces
        ein               ; tame Jupyter notebooks with emacs
        (eval +overlay)     ; run code, run (also, repls)
        gist              ; interacting with github gists
        (lookup           ; helps you navigate your code and documentation
         +docsets)        ; ...or in Dash docsets locally
-       lsp
+       (lsp +peek)
        (magit             ; a git porcelain for Emacs
         +forge)
        make              ; run make tasks from Emacs
@@ -151,19 +159,26 @@
        ;;nix               ; I hereby declare "nix geht mehr!"
        ;;ocaml             ; an objective camel
        (org              ; organize your plain life in plain text
+        +brain
+        +gnuplot
+        +ipython
         +pretty
         +journal
         +dragndrop       ; drag & drop files/images into org buffers
         ;;+hugo            ; use Emacs for hugo blogging
         +jupyter        ; ipython/jupyter support for babel
         +pandoc          ; export-with-pandoc support
-        ;;+pomodoro        ; be fruitful with the tomato technique
-        +present)        ; using org-mode for presentations
+        +pomodoro        ; be fruitful with the tomato technique
+        +present        ; using org-mode for presentations
+        +noter
+        +roam)
        ;;perl              ; write code no one else can comprehend
        ;;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
        ;;purescript        ; javascript, but functional
-       (python +lsp)     ; beautiful is better than ugly
+       (python          ; beautiful is better than ugly
+		+conda +lsp +pyenv +poetry)
+        ;; +cython +lsp +pyright +pyenv +conda +poetry)
        qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client

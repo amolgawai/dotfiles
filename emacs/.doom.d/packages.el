@@ -50,5 +50,7 @@
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
 
-(package! ranger)
+;; (package! ranger)
 (package! imenu-list)
+;; (package! blamer)
+(package! yasnippet-snippets)
