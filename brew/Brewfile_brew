@@ -94,6 +94,8 @@ brew "poppler" # to work with pdf files and merge/extract them for example
 brew "pandoc"
 brew "glow"   # markdown CLI renderer
 brew "slides" # markdown presentations in terminal
+brew "ocrmypdf" # add ocr layer to scanned pdfs
+brew "tesseract-lang" # languages for the ocrmypdf
 
 ## macos ##
 brew "command-tab-plus"
