@@ -1,0 +1,22 @@
+# Set the layout for the current tab
+title home
+layout tall
+# Set the working directory for windows in the current tab
+cd ~
+# Create a window and run the specified command in it
+launch zsh
+launch ranger
+
+# Create a new tab (the part after new_tab is the optional tab
+# name which will be displayed in the tab bar, if omitted, the
+# title of the active window will be used instead)
+new_tab code
+cd ~/code
+# Set the current layout
+launch zsh
+
+# Create a new OS window
+new_tab nvim
+layout tall
+cd ~
+launch nvim

@@ -379,6 +379,7 @@ function setup_kitty() {
     cloneOrUpdate $(KITTY_CONFIG)/kitty-themes "--depth 1 https://github.com/dexpota/kitty-themes.git "
     symlink "Kitty Theme" ${KITTY_CONFIG}/kitty-themes/themes/OneDark.conf ${KITTY_CONFIG}/theme.conf
 	symlink "Kitty config" ${DOTFILES_ROOT}/kitty/kitty.config ${KITTY_CONFIG}/kitty.config
+    symlink "kitty startup" ${DOTFILES_ROOT}/kitty/startup.config ${KITTY_CONFIG}/startup.config
 }
 
 # FIXME - add this to other symlinking in above function
