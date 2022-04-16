@@ -19,4 +19,4 @@ launch zsh
 new_tab nvim
 layout tall
 cd ~
-launch nvim
+launch vim
