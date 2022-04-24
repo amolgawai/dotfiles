@@ -11,6 +11,7 @@ brew "thefuck"
 brew "trash"
 brew "parallel"
 brew "topgrade" # All-in-one upgrade tool
+brew "nushell" # modern shell written in rust
 
 ## modern CLI tools ##
 brew "ag"

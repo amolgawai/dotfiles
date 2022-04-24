@@ -15,8 +15,15 @@ cd ~/code
 # Set the current layout
 launch zsh
 
-# Create a new OS window
+# Launch nvim in own tab
 new_tab nvim
 layout tall
 cd ~
 launch vim
+
+# Create tab with nushell and nnn file manger
+new_tab n-term
+layout tall
+cd ~
+launch nu
+launch nnn
