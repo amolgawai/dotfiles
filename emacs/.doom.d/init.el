@@ -125,6 +125,7 @@
 
        :lang
        ;;agda              ; types of types of types of types...
+       ansible
        ;;assembly          ; assembly for fun or debugging
        (cc +lsp)           ;C/C++/Obj-C madness
        ;;clojure           ; java with a lisp
@@ -192,6 +193,7 @@
        swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
        web               ; the tubes
+       (yaml +lsp)
 
        :email
        ;;(mu4e +gmail)
