@@ -19,11 +19,11 @@ launch zsh
 new_tab nvim
 layout tall
 cd ~
-launch vim
+launch zsh -c 'vim'
 
 # Create tab with nushell and nnn file manger
 new_tab n-term
 layout tall
 cd ~
-launch nu
+launch zsh -c 'nu'
 launch nnn

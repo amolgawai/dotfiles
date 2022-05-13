@@ -24,6 +24,7 @@ cask "onyx"
 ## productivity ##
 cask 'clipy'
 cask "alfred"
+cask 'raycast'
 cask 'cheatsheet'
 cask "kap"                          # open source screen recorder
 cask "karabiner-elements"
@@ -39,6 +40,7 @@ cask "spyder"
 cask "sublime-text"
 cask "vimr"
 cask "typora"
+cask "lapce" # code editor written in Rust
 
 ## coding ##
 cask "dash"
