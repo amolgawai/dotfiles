@@ -5,7 +5,7 @@ layout tall
 cd ~
 # Create a window and run the specified command in it
 launch zsh
-launch ranger
+launch zsh -c 'ranger'
 
 # Create a new tab (the part after new_tab is the optional tab
 # name which will be displayed in the tab bar, if omitted, the
@@ -19,7 +19,7 @@ launch zsh
 new_tab nvim
 layout tall
 cd ~
-launch zsh -c 'vim'
+launch zsh -c 'nvim'
 
 # Create tab with nushell and nnn file manger
 new_tab n-term

@@ -185,4 +185,7 @@ export PATH="$PATH:~/.local/bin"
 # since ruby and gems are installed for user, add path
 export PATH="~/.gem:$PATH"
 
+# cache for cpm.cmake
+export CPM_SOURCE_CACHE=$HOME/.cache/CPM
+
 neofetch
