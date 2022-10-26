@@ -124,6 +124,7 @@ brew "bazelisk" # A user-friendly launcher for Bazel
 brew "buildifier" # formatter for bazel build files
 brew "ccache" # The compiler cache tool
 brew "cmake" # The build generator for c, c++
+brew "cloc"  # count code info
 brew "ninja" # Fast build engine
 brew "cookiecutter"
 # brew "ctags"
