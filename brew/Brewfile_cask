@@ -6,6 +6,7 @@ cask 'alacritty'
 cask 'kitty'
 cask 'edex-ui' # fun bling terminal
 cask "iterm2"
+cask "warp"
 
 ## media - audio, video, images ##
 cask "inkscape"
