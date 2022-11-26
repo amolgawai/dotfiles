@@ -19,6 +19,7 @@ brew "ack"
 brew 'bat' # a featurful cat replacement
 brew "exa" # fast ls replacement written in Rust
 brew "fd"
+brew "sd" # replacement for sed
 brew "findutils"
 brew "fzf"
 brew "ripgrep"
@@ -125,6 +126,7 @@ brew "buildifier" # formatter for bazel build files
 brew "ccache" # The compiler cache tool
 brew "cmake" # The build generator for c, c++
 brew "cloc"  # count code info
+brew "tokei"  # count code info
 brew "ninja" # Fast build engine
 brew "cookiecutter"
 # brew "ctags"
