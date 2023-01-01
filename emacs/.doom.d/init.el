@@ -50,8 +50,6 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       (ligatures
-         +extra)       ; replace bits of code with pretty symbols
        tabs              ; an tab bar for Emacs
        (treemacs          ; a project drawer, like neotree but cooler
         +lsp)
