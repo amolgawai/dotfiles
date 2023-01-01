@@ -29,7 +29,7 @@
         +prescient
         +icons
         +childframe)
-       (vertico +icons§)
+       (vertico +icons)
 
        :ui
        deft              ; notational velocity for Emacs
