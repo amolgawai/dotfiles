@@ -84,7 +84,8 @@ plugins=(
     zsh-autosuggestions
     fast-syntax-highlighting
     alias-tips
-    zsh-aliases-exa
+    # zsh-aliases-exa
+    zsh-exa
 )
 
 source $ZSH/oh-my-zsh.sh

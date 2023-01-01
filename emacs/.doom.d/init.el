@@ -29,6 +29,7 @@
         +prescient
         +icons
         +childframe)
+       (vertico +icons§)
 
        :ui
        deft              ; notational velocity for Emacs
@@ -49,7 +50,8 @@
        (popup            ; tame sudden yet inevitable temporary windows
         +all             ; catch all popups that start with an asterix
         +defaults)       ; default popup rules
-       pretty-code       ; replace bits of code with pretty symbols
+       (ligatures
+         +extra)       ; replace bits of code with pretty symbols
        tabs              ; an tab bar for Emacs
        (treemacs          ; a project drawer, like neotree but cooler
         +lsp)
