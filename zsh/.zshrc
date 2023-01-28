@@ -154,7 +154,7 @@ fi
 eval "$(pyenv virtualenv-init -)"
 
 # poetry initialization
-source $HOME/.poetry/env
+# source $HOME/.poetry/env
 unalias grv
 
 # conda initialization
