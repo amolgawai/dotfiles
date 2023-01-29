@@ -12,6 +12,7 @@ brew "trash"
 brew "parallel"
 brew "topgrade" # All-in-one upgrade tool
 brew "nushell" # modern shell written in rust
+brew "shellcheck" # A shell script static analysis tool
 
 ## modern CLI tools ##
 brew "ag"
