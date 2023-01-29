@@ -19,8 +19,9 @@ launch zsh
 new_tab lvim
 layout tall
 cd ~
-launch zsh -c 'lvim'
-# /Users/amolgawai/.local/bin/lvim
+# launch lvim
+# launch zsh -c 'lvim'
+launch zsh "/Users/amolgawai/.local/bin/lvim"
 
 # Launch nvim in own tab
 new_tab nvim

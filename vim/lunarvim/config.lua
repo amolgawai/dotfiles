@@ -11,6 +11,9 @@ an executable
 -- vim settings
 vim.opt.relativenumber = true
 vim.opt.guifont = "SauceCodePro Nerd Font Mono:h20"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
 --
 
 -- general
@@ -222,6 +225,12 @@ lvim.plugins = {
     config = function()
       require('mkdnflow').setup({})
     end
+  },
+
+  -- org mode
+  { 'nvim-orgmode/orgmode', config = function()
+    require('orgmode').setup {}
+  end
   },
 }
 
