@@ -16,7 +16,7 @@
 
 -- Defines the profiles you want to use
 local profiles = {
-	--[[
+  --[[
 	Here's an example:
 
 		<name_of_config> = { <path_to_config>, {
@@ -27,11 +27,11 @@ local profiles = {
 
 	More in-depth information can be found in cheovim's README on GitHub.
 	--]]
-	-- my_config = { "~/.config/nvim.bak", {
-	-- 		plugins = "packer",
-	-- 		preconfigure = "packer",
-	-- 	}
-	-- },
+  -- my_config = { "~/.config/nvim.bak", {
+  -- 		plugins = "packer",
+  -- 		preconfigure = "packer",
+  -- 	}
+  -- },
 
   -- doom-nvim
   doom_nvim = { "~/code/nvim-distros/doom-nvim/", {
@@ -44,6 +44,12 @@ local profiles = {
   astro_nvim = { "~/code/nvim-distros/astronvim/", {
     plugins = "packer",
     preconfigure = "packer",
+  }
+  },
+
+  my_config = { "~/code/nvim-distros/neodvimture/", {
+    plugins = "packer",
+    preconfigure = "packer"
   }
   },
 }
