@@ -31,6 +31,7 @@ brew "tre" # modern tree replacement
 brew "grep"
 brew "xplr" # cli file manager written in rust
 brew "zenith"
+brew "hyperfine" #A command-line benchmarking tool
 
 ## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]
