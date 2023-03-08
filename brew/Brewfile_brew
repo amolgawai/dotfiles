@@ -13,6 +13,7 @@ brew "parallel"
 brew "topgrade" # All-in-one upgrade tool
 brew "nushell" # modern shell written in rust
 brew "shellcheck" # A shell script static analysis tool
+brew "xonsh" # Python based shell
 
 ## modern CLI tools ##
 brew "ag"
@@ -70,6 +71,7 @@ brew "glances" # cli system monitor
 brew "tmux"
 brew "tmuxinator"
 brew "tab"
+brew "zellij"
 
 ## git and related ##
 brew "git"
