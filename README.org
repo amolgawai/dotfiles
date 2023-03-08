@@ -35,7 +35,8 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - secondary [[https://www.iterm2.com][iTerm2]]
   - Future -> [[https://github.com/sedwards2009/extraterm][extraterm]]
 - Terminal multiplexur
-  - Primary -  [[https://github.com/tmux/tmux][tmux]] with [[https://github.com/tmuxinator/tmuxinator][tmuxinator]] for easily managing sessions
+  - Primary -  [[https://github.com/zellij-org/zellij][Zellij]]
+  - Secondary - [[https://github.com/tmux/tmux][tmux]] with [[https://github.com/tmuxinator/tmuxinator][tmuxinator]] for easily managing sessions
   - Experimental - [[https://github.com/austinjones/tab-rs][tab]]
 - manage ssh keys with [[https://stormssh.readthedocs.io/en/master/][sshstorm]]
 - A viewer for git and diff output [[https://github.com/dandavison/delta#installation][delta]]
