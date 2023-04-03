@@ -35,3 +35,9 @@ layout tall
 cd ~
 launch zsh -c 'nu'
 launch nnn
+
+# Create tab with xonsh shell (Python based shell)
+new_tab xonsh
+layout tall
+cd ~
+launch zsh -c 'xonsh'

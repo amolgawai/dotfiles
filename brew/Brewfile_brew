@@ -87,6 +87,7 @@ brew "hub"
 brew "tig" # ncurses-based text-mode interface for git
 brew "gh"  # github CLI
 brew "lazygit"
+brew "gitui"
 brew "onefetch" # git repo info similar to neofetch
 
 ## markdown, pdf, documentation, graphs etc. ##
