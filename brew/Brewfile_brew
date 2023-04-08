@@ -33,6 +33,7 @@ brew "grep"
 brew "xplr" # cli file manager written in rust
 brew "zenith"
 brew "hyperfine" #A command-line benchmarking tool
+brew "rtx" # Polyglot runtime manager (asdf rust clone)
 
 ## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]

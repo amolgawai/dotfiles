@@ -10,9 +10,10 @@
 
 # Shortcuts
 # alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias dcode="cd ~/code"
+alias cd_dwld="cd ~/Downloads"
+alias cd_dsktp="cd ~/Desktop"
+alias cd_code="cd ~/code"
+alias cd_dtfls="cd ~/code/dotfiles"
 # Not necessary due to oh-my-zsh git plugin
 # alias g="git"
 alias cls='clear'
