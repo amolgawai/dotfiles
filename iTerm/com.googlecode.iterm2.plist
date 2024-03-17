@@ -59294,7 +59294,7 @@
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>
-			<string>zellij --layout strider</string>
+			<string>zellij</string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>

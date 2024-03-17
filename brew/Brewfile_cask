@@ -21,6 +21,7 @@ cask 'cpuinfo'
 cask 'iglance'
 cask "oni"
 cask "onyx"
+cask "mac-cleanup/mac-cleanup-py"
 
 ## productivity ##
 cask 'clipy'
