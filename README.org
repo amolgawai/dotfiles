@@ -83,7 +83,7 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - Experimental - [[https://github.com/jkitchin/scimax.git][scimax]] (scimax), [[https://github.com/myTerminal/super-emacs.git][super-emacs (superemacs)]], [[https://github.com/rougier/elegant-emacs][elegant-emacs]] (elegantemacs)
 - Vim
   - [[https://github.com/neovim/neovim][neovim]], modern vim
-  - Primary - [[https://www.lunarvim.org/][LunarVim]], [[https://astronvim.github.io/][AstroNvim]]
+  - Primary - ~~~~[[https://www.lunarvim.org/][LunarVim]]~~, [[https://astronvim.github.io/][AstroNvim]] - LunarVim is not maintained any more
   - Experimental - [[https://github.com/doom-neovim/doom-nvim][doom-nvim]], My own config (todo)
 ** GUI tools
    :PROPERTIES:
