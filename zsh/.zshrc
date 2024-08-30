@@ -87,7 +87,7 @@ plugins=(
     fast-syntax-highlighting
     alias-tips
     # zsh-aliases-exa
-    zsh-exa
+    eza
 )
 
 source $ZSH/oh-my-zsh.sh

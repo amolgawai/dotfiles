@@ -19,7 +19,8 @@ brew "xonsh" # Python based shell
 brew "ag"
 brew "ack"
 brew 'bat' # a featurful cat replacement
-brew "exa" # fast ls replacement written in Rust
+# brew "exa" # fast ls replacement written in Rust
+brew "eza" # fast ls replacement written in Rust
 brew "fd"
 brew "sd" # replacement for sed
 brew "findutils"

@@ -61,7 +61,8 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - [[https://github.com/svenstaro/genact][genact]] -> a nonsense activity generator
 - Productivity and Modern tools
   - [[https://github.com/junegunn/fzf][fzf]] The command line fuzzy finder ([[file:cheatsheetNquickrefs/fzf_quickref.md][quickref]])
-  - [[https://the.exa.website][exa]] -> A modern replacement for ls
+  - ++[[https://the.exa.website][exa]] -> A modern replacement for ls++
+  - [[https://github.com/eza-community/eza][eza]] -> A modern replacement for ls
   - [[https://github.com/sharkdp/bat][bat]] -> A cat clone with syntax highlighting and Git integration.
   - [[https://github.com/dduan/tre][tre]] -> A replacement for tree command that uses git ls-files as source of file when possible
   - [[https://github.com/sharkdp/fd][fd]] -> simple, fast and user-friendly alternative to find.
