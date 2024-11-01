@@ -1,0 +1,60 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  // Panel nagivation
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // Map VSCode like keybindings
+      "cmd-b": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // leader keys
+      "space space": "command_palette::Toggle",
+      "space /": "workspace::NewSearch",
+      "space b b": "tab_switcher::Toggle",
+      "space b d": "pane::CloseActiveItem",
+      "space d": "diagnostics::Deploy",
+      "space e": "project_panel::Open",
+      "space f f": "file_finder::Toggle",
+      "space f s": "workspace::Save",
+      "space g b": "editor::ToggleGitBlame",
+      "space l f": "editor::Format",
+      "n": "search::SelectNextMatch",
+      "space t t": "terminal_panel::ToggleFocus",
+      "space t o": "outline::Toggle",
+      // Shift keys
+      "shift-k": "editor::Hover",
+      "shift-n": "search::SelectPrevMatch"
+    }
+  }
+]
