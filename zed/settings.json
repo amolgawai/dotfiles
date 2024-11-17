@@ -7,9 +7,18 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "assistant": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
+    },
+    "version": "2"
+  },
   "vim_mode": true,
   // use relative line numbers
   "relative_line_numbers": true,
+  "format_on_save": "on",
+  "formatter": "language_server",
   // Indentation, rainbow indentation
   "theme": {
     "mode": "system",
