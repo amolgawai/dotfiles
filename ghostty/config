@@ -1,0 +1,27 @@
+font-family = SauceCodePro Nerd Font
+# font-family = BerkeleyMono Nerd Font
+#font-family = Iosevka Nerd Font
+# font-family = SFMono Nerd Font 
+font-size = 16
+theme = dracula
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+adjust-cell-height = 35%
+# background-opacity = 0.96
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+window-padding-balance = true 
+window-save-state = always
+macos-titlebar-style=transparent
+window-colorspace = "display-p3"
+background = 1C2021
+# foreground = d4be98
+# OSX 
+macos-auto-secure-input = true
+macos-icon-frame = plastic
+macos-secure-input-indication = true
+macos-titlebar-style = transparent
+macos-window-shadow = true
+macos-option-as-alt = true
