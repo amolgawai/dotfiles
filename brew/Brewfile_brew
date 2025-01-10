@@ -31,12 +31,11 @@ brew "fzy"
 brew "the_silver_searcher"
 brew "tre" # modern tree replacement
 brew "grep"
-brew "xplr" # cli file manager written in rust
 brew "zenith"
 brew "hyperfine" #A command-line benchmarking tool
 brew "rtx" # Polyglot runtime manager (asdf rust clone)
 brew "television" # tui for fuzzy finding
-
+brew "poppler" # pdf rendering library
 ## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
@@ -62,6 +61,8 @@ brew "lf"    # console file manager written in go
 brew "ranger"
 brew "vifm"
 brew "nnn"
+brew "xplr" # cli file manager written in rust
+brew "yazi"  # cli file manager
 
 ## System info ##
 brew "neofetch" # CLI sys info (term startup bling)

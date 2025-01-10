@@ -41,6 +41,7 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
 - manage ssh keys with [[https://stormssh.readthedocs.io/en/master/][sshstorm]]
 - A viewer for git and diff output [[https://github.com/dandavison/delta#installation][delta]]
 - File Managers
+  - new -> [[https://yazi-rs.github.io][yazi]]
   - primary -> [[https://github.com/Canop/broot][broot]], [[https://github.com/ranger/ranger][ranger]]
   - experimental -> [[https://github.com/vifm/vifm][vifm]], [[https://github.com/jarun/nnn][nnn]]
 - System Info
@@ -77,6 +78,8 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - [[https://github.com/denisidoro/navi][navi]] -> An interactive cheatsheet tool for the command-line and application launchers.
 
 ** Editor
+- [[https://zed.dev][zed]]
+- [[https://code.visualstudio.com][Vscode]]/[[https://vscodium.com][Vscodium]]
 - Emacs
   - Multiple emacs "distros" managed by [[https://github.com/plexus/chemacs.git][chemacs]]
   - Primary - [[https://github.com/amolgawai/emacsadventures][emacsadventures]] -> My own emacs configuration
