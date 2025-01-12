@@ -36,11 +36,13 @@ brew "hyperfine" #A command-line benchmarking tool
 brew "rtx" # Polyglot runtime manager (asdf rust clone)
 brew "television" # tui for fuzzy finding
 brew "poppler" # pdf rendering library
+
 ## CLI editors ##
 #brew "vim", args: ["--with-override-system-vi"]
 # brew "vim"
 # brew "macvim"
 brew "neovim"
+brew "helix"
 
 ## fun ##
 brew "fortune"
@@ -65,7 +67,8 @@ brew "xplr" # cli file manager written in rust
 brew "yazi"  # cli file manager
 
 ## System info ##
-brew "neofetch" # CLI sys info (term startup bling)
+# brew "neofetch" # CLI sys info (term startup bling) - deprecated
+brew "fastfetch" # CLI sys info (term startup bling)
 brew "dust"
 brew "procs"
 brew "htop"

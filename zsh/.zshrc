@@ -70,6 +70,7 @@ export ZSH=~/.oh-my-zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+    autoupdate
     git
     git-extras
     brew
@@ -132,7 +133,7 @@ done;
 unset file;
 
 
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 # source ~/.oh-my-zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -178,8 +179,10 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 ulimit -S -n 2048
 
 # auto completions for pipx
-autoload -U bashcompinit
-bashcompinit
+# autoload -U bashcompinit
+# bashcompinit
+# autoload -Uz compinit
+# compinit
 eval "$(register-python-argcomplete pipx)"
 
 # Created by `userpath` on 2021-01-17 20:45:55
@@ -191,9 +194,9 @@ export PATH="~/.gem:$PATH"
 # cache for cpm.cmake
 export CPM_SOURCE_CACHE=$HOME/.cache/CPM
 
-neofetch
-
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
 [ -f "/Users/amolgawai/.ghcup/env" ] && . "/Users/amolgawai/.ghcup/env" # ghcup-env
+source ~/.cargo/env
+fastfetch
