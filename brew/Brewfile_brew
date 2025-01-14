@@ -42,7 +42,8 @@ brew "poppler" # pdf rendering library
 # brew "vim"
 # brew "macvim"
 brew "neovim"
-brew "helix"
+brew "helixe"
+brew "emacs-plus"
 
 ## fun ##
 brew "fortune"

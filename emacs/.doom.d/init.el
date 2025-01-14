@@ -144,7 +144,7 @@
        ;;fsharp           ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        (go +lsp)         ; the hipster dialect
-       ;;(haskell +dante)  ; a language that's lazier than I am
+       (haskell +lsp)  ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ;
        ;;(java +meghanada) ; the poster child for carpal tunnel syndrome
@@ -173,7 +173,7 @@
         +pomodoro        ; be fruitful with the tomato technique
         +present        ; using org-mode for presentations
         +noter)
-        ;; +roam)
+       ;; +roam)
        ;;perl              ; write code no one else can comprehend
        ;;php               ; perl's insecure younger brother
        plantuml          ; diagrams for confusing people more
@@ -184,8 +184,8 @@
         +poetry
         +pyright
         +conda)
-		;; +conda +lsp +pyenv +poetry)
-        ;; +cython +lsp +pyright +pyenv +conda +poetry)
+       ;; +conda +lsp +pyenv +poetry)
+       ;; +cython +lsp +pyright +pyenv +conda +poetry)
        qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;rest              ; Emacs as a REST client

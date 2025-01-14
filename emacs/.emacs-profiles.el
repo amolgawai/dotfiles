@@ -25,9 +25,8 @@
 ;;
 
 ;;; Code:
-;; FIXME:- change the doom-emacs directory to ~/code/emacs-distros/doom-emacs
 
-(("default" . ((user-emacs-directory . "~/.emacs.d")))
+(("default" . ((user-emacs-directory . "~/code/emacs-distros/emacsadventures")))
  ("scimax" . ((user-emacs-directory . "~/code/emacs-distros/scimax")))
  ("super-emacs" . ((user-emacs-directory . "~/code/emacs-distros/super-emacs/.emacs.d")))
  ("elegant-emacs" . ((user-emacs-directory . "~/code/emacs-distros/elegantemacs")))

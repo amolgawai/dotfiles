@@ -80,8 +80,10 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
 ** Editor
 - [[https://zed.dev][zed]]
 - [[https://code.visualstudio.com][Vscode]]/[[https://vscodium.com][Vscodium]]
+- [[https://helix-editor.com/][helix-editor]]
 - Emacs
-  - Multiple emacs "distros" managed by [[https://github.com/plexus/chemacs.git][chemacs]]
+[[https://github.com/doomemacs/doomemacs/blob/master/docs/getting_started.org#on-macos][Install emacs on Mac]]
+  - Multiple emacs "distros" managed by [[https://github.com/plexus/chemacs2?tab=readme-ov-file][chemacs2]]
   - Primary - [[https://github.com/amolgawai/emacsadventures][emacsadventures]] -> My own emacs configuration
   - Secondary - [[https://github.com/hlissner/doom-emacs][doom-emacs]], invoked by doomacs
   - Experimental - [[https://github.com/jkitchin/scimax.git][scimax]] (scimax), [[https://github.com/myTerminal/super-emacs.git][super-emacs (superemacs)]], [[https://github.com/rougier/elegant-emacs][elegant-emacs]] (elegantemacs)

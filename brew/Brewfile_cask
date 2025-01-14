@@ -36,7 +36,8 @@ cask "insomnia"
 
 
 ## editors (text, markdown) ##
-cask "emacs"
+# cask "emacs"
+# cask "d12frosted/emacs-plus"
 cask "mark-text"
 cask "mactex"
 cask "spyder"

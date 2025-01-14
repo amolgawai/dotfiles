@@ -10,3 +10,4 @@ tap "homebrew/services"
 tap 'universal-ctags/universal-ctags'
 tap "srkomodo/tap"
 tap "austinjones/taps/tab"
+tap "d12frosted/emacs-plus"

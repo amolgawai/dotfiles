@@ -239,16 +239,17 @@ function setup_emacsadventures() {
 	substep "setting up emacsadventures"
 	EMCADVTR=${EMACS_DISTROS}/emacsadventures
 	cloneOrUpdate $EMCADVTR https://github.com/amolgawai/emacsadventures.git
-	symlink "emacsadventure" $EMCADVTR ~/.emacs.d/emacsadventures
-	echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" >~/.emacs.d/init.el
+	# symlink "emacsadventure" $EMCADVTR ~/.emacs.d/emacsadventures
+	echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" >$EMCADVTR/init.el
 	success "emacsadventures setup succeeded"
 }
 
 function setup_chemacs() {
 	substep "setting up chemacs"
-	CHEMACS=${EMACS_DISTROS}/chemacs
-	cloneOrUpdate $CHEMACS https://github.com/plexus/chemacs.git
-	$CHEMACS/install.sh
+	# CHEMACS=${EMACS_DISTROS}/chemacs
+	CHEMACS=~/.emacs.d
+	cloneOrUpdate $CHEMACS https://github.com/plexus/chemacs2.git
+	# $CHEMACS/install.sh
 	symlink "chemacs-profiles" ${DOTFILES_ROOT}/emacs/.emacs-profiles.el ~/.emacs-profiles.el
 	success "chemacs setup completed"
 }
