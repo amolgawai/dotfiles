@@ -26,7 +26,7 @@
 
 ;;; Code:
 
-(("default" . ((user-emacs-directory . "~/code/emacs-distros/emacsadventures")))
+(("default" . ((user-emacs-directory . "~/code/emacs-distros/emacsadventures_runtime")))
  ("scimax" . ((user-emacs-directory . "~/code/emacs-distros/scimax")))
  ("super-emacs" . ((user-emacs-directory . "~/code/emacs-distros/super-emacs/.emacs.d")))
  ("elegant-emacs" . ((user-emacs-directory . "~/code/emacs-distros/elegantemacs")))

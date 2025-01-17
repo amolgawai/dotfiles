@@ -238,9 +238,9 @@ function setup_superemacs() {
 function setup_emacsadventures() {
 	substep "setting up emacsadventures"
 	EMCADVTR=${EMACS_DISTROS}/emacsadventures
+	EMCADVTR_RNTIME=${EMACS_DISTROS}/emacsadventures_runtime
 	cloneOrUpdate $EMCADVTR https://github.com/amolgawai/emacsadventures.git
-	# symlink "emacsadventure" $EMCADVTR ~/.emacs.d/emacsadventures
-	echo "(load \"~/.emacs.d/emacsadventures/loadMyConfig.el\")" >$EMCADVTR/init.el
+	echo "(load ${EMCADVTR}\"/loadMyConfig.el\")" >${EMCADVTR_RNTIME}/init.el
 	success "emacsadventures setup succeeded"
 }
 
