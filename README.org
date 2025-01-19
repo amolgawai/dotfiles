@@ -30,9 +30,9 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
     - Primary -> [[https://github.com/starship/starship][starship]]
     - Secondary -> [[https://github.com/romkatv/powerlevel10k][powerlevel10k]]
 - Terminal Emulators
-  - Primary- [[https://github.com/kovidgoyal/kitty][kitty]],  [[https://github.com/alacritty/alacritty][Alacritty]]
+  - Primary- [[https://github.com/ghostty-org/ghostty][Ghostty]], [[https://github.com/kovidgoyal/kitty][kitty]]
   - Fun -> [[https://github.com/GitSquared/edex-ui][edex-ui]]
-  - secondary [[https://www.iterm2.com][iTerm2]]
+  - secondary [[https://www.iterm2.com][iTerm2]], [[https://github.com/alacritty/alacritty][Alacritty]]
   - Future -> [[https://github.com/sedwards2009/extraterm][extraterm]]
 - Terminal multiplexur
   - Primary -  [[https://github.com/zellij-org/zellij][Zellij]]
@@ -62,6 +62,7 @@ Go to[[file:cheatsheetNquickrefs/][ cheatsheet and quick references]]
   - [[https://github.com/svenstaro/genact][genact]] -> a nonsense activity generator
 - Productivity and Modern tools
   - [[https://github.com/junegunn/fzf][fzf]] The command line fuzzy finder ([[file:cheatsheetNquickrefs/fzf_quickref.md][quickref]])
+      - [[https://github.com/alexpasmantier/television][television]] -> Blazing fast general purpose fuzzy finder TUI.
   - ++[[https://the.exa.website][exa]] -> A modern replacement for ls++
   - [[https://github.com/eza-community/eza][eza]] -> A modern replacement for ls
   - [[https://github.com/sharkdp/bat][bat]] -> A cat clone with syntax highlighting and Git integration.
