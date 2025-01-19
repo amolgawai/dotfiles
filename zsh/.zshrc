@@ -199,4 +199,5 @@ export CPM_SOURCE_CACHE=$HOME/.cache/CPM
 
 [ -f "/Users/amolgawai/.ghcup/env" ] && . "/Users/amolgawai/.ghcup/env" # ghcup-env
 source ~/.cargo/env
+eval "$(tv init zsh)"
 fastfetch
