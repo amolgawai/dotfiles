@@ -71,6 +71,7 @@ export ZSH=~/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     autoupdate
+    fzf-tab
     git
     git-extras
     brew
@@ -89,6 +90,9 @@ plugins=(
     alias-tips
     # zsh-aliases-exa
     eza
+    z
+    sudo
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh

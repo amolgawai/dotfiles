@@ -111,6 +111,7 @@ brew "glow"   # markdown CLI renderer
 brew "slides" # markdown presentations in terminal
 brew "ocrmypdf" # add ocr layer to scanned pdfs
 brew "tesseract-lang" # languages for the ocrmypdf
+brew "marksman" # markdown lsp
 
 ## macos ##
 brew "command-tab-plus"
